@@ -35,13 +35,19 @@ module carriage_stl() {
       union() {
         ty(arm_offset) hull() {
           rrcf([arm_mount_w-4, th*2.5, th]);
-          tz(mount_height) ry(90) cylinder(d = 8, h = arm_mount_w, center = true, $fn = 32);
+          tz(mount_height) ry(90)
+            cylinder(d = 8, h = arm_mount_w, center = true, $fn = 32);
         }
         hull() {
           ty(arm_offset) rrcf([arm_mount_w-4, th*2.5, th]);
           rrcf([carriage_width(car), carriage_length(car), th]);
         }
       }
+
+      // belt clearance
+      myz(8) tyz(arm_offset, mount_height+8/2)
+        rc([th,20,th]);
+
       // clearance for traxis rod ends
       ty(arm_offset) {
         myz(arm_mount_w/2) tz(mount_height+2)
@@ -70,5 +76,10 @@ module carriage_stl() {
       }
     }
   }
+}
+
+if ($preview) {
+  $explode = 0;
+  carriage_assembly();
 }
 

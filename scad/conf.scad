@@ -39,6 +39,10 @@ car_rail = carriage_rail(MGN12H_carriage);
 arm_mount_offset = carriage_length(car)/2-th*1.25;
 motor_mount_offset = 59;
 idler_mount_offset = 59;
+belt_offset = 47;
+bed_thickness = 4;
+bed_height = 74+bed_thickness; // top of bed is 60+13+1+thickness
+carriage_height = bed_height + 300;
 ew = extrusion_width(upright_extrusion);
 ew2 = extrusion_height(side_extrusion);
 

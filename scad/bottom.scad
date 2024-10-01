@@ -29,7 +29,10 @@ module bottom_motor_mount_assembly() assembly("bottom_motor_mount") {
       NEMA(NEMA17_47);
       NEMA_screw_positions(NEMA17_47, 4)
         tz(th) screw_and_washer(motor_screw, 8);
-      tz(6) pulley(opulley);
+      tz(motor_mount_offset-belt_offset
+         +pulley_hub_length(opulley)/2
+         -pulley_flange_thickness(opulley)/2)
+        pulley_assembly(opulley);
     }
   }
 }

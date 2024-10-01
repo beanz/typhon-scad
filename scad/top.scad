@@ -22,6 +22,22 @@ module idler_assembly() assembly("idler") {
   idler_mount_screw_positions() rx(90) extrusion_screw(M4_cap_screw, 10);
   txz(-idler_mount_offset-th/2, ew2/2) ry(-90)
     extrusion_screw(M5_cap_screw, idler_mount_offset-ew/4);
+  txz(-belt_offset, ew2/2) ry(-90) idler_bearing_assembly();
+}
+
+module idler_bearing_assembly() assembly("idler_bearing") {
+  mxy(0) {
+    explode([0, 0, 5], true) {
+      tz(ball_bearing_h(BBF625)/2) {
+        mirror([0,0,1]) ball_bearing(BBF625);
+        explode([0, 0, 5], true) {
+          tz(ball_bearing_h(BBF625)/2) {
+            washer(M5_washer);
+          }
+        }
+      }
+    }
+  }
 }
 
 module idler_stl() stl("idler") {

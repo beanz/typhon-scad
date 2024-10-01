@@ -3,7 +3,7 @@ include <conf.scad>
 include <lazy.scad>
 include <vitamins.scad>
 
-//use <belts.scad>
+use <belts.scad>
 use <bottom.scad>
 use <carriage.scad>
 use <top.scad>
@@ -16,19 +16,45 @@ module main_assembly()
 
   for (a = [0, 120, 240]) {
     rz(a) tx(delta_r) {
-      tz(20) upright_assembly();
+      upright_assembly();
       bottom_corner_assembly();
       tz(delta_h+20+th) rx(180) top_corner_assembly();
+      tx(-belt_offset) upright_belt();
     }
   }
-  color("silver") render() tz(74) cylinder(d=bed_diameter, h=4);
+  color("silver") render() tz(bed_height-bed_thickness)
+    cylinder(d=bed_diameter, h=bed_thickness);
+}
+
+module upright_belt() {
+  bottom_r = pulley_hub_dia(opulley)/2;
+  bottom_offset = 60/2 - bottom_r;
+  top_r = bb_diameter(BBF625)/2;
+  top_offset = delta_h + ew2/2 + top_r;
+  echo("bottom_r", bottom_r);
+  echo("top_r", top_r);
+  rz(90) rx(90)
+    mbelt(GT2x6,
+      [
+       [-bottom_r, carriage_height+5],
+       [-top_r,    top_offset],
+       [ top_r,    top_offset],
+       [ bottom_r, bottom_offset],
+       [-bottom_r, bottom_offset],
+       [-bottom_r, carriage_height-10],
+       [-bottom_r+2.5, carriage_height-7.5],
+       [-bottom_r+5, carriage_height-7.5],
+       [-bottom_r+7.5, carriage_height-10],
+      ]);
 }
 
 module upright_assembly() {
   assembly("upright") {
-    extrusion(upright_extrusion, delta_h, center = false);
-    txz(-ew/2, -400+delta_h-ew2) ry(-90) rz(180) {
+    tz(ew2) extrusion(upright_extrusion, delta_h, center = false);
+    txz(-ew/2, -400+delta_h) ry(-90) rz(180) {
       rail(carriage_rail(car), 800);
+    }
+    txz(-ew/2, carriage_height) ry(-90) rz(180) {
       carriage_assembly();
     }
   }
