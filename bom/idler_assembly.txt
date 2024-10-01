@@ -1,0 +1,13 @@
+idler_assemblies:
+Vitamins:
+ 12 Screw M4 cap x 10mm
+  3 Screw M5 cap x 49mm
+ 15 Nut M4 sliding T
+ 12 Washer  M4 x 9mm x 0.8mm
+  3 Washer  M5 x 10mm x 1mm
+
+Printed:
+  3 idler.stl
+
+Assemblies:
+  3 idler_bearing_assemblies

@@ -1,0 +1,1153 @@
+<p><a name="TOP"></a></p>
+<h1>Typhon-scad</h1>
+<p>Cerberus-revised for MGN rails</p>
+<p><img alt="Main Assembly" src="assemblies/main_assembled.png" /></p>
+<p><span></span></p>
+<hr />
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#Parts_list">Parts list</a></li>
+<li><a href="#idler_bearing_assembly">Idler Bearing Assembly</a></li>
+<li><a href="#idler_assembly">Idler Assembly</a></li>
+<li><a href="#top_corner_assembly">Top Corner Assembly</a></li>
+<li><a href="#bottom_motor_mount_assembly">Bottom Motor Mount Assembly</a></li>
+<li><a href="#bed_mount_right_assembly">Bed Mount Right Assembly</a></li>
+<li><a href="#bed_mount_left_assembly">Bed Mount Left Assembly</a></li>
+<li><a href="#bottom_extrusion_assembly">Bottom Extrusion Assembly</a></li>
+<li><a href="#bottom_corner_assembly">Bottom Corner Assembly</a></li>
+<li><a href="#carriage_assembly">Carriage Assembly</a></li>
+<li><a href="#upright_assembly">Upright Assembly</a></li>
+<li><a href="#main_assembly">Main Assembly</a></li>
+</ol>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="Parts_list"></a></p>
+<h2>Parts list</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Idler&nbsp;Bearing</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Idler</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Top&nbsp;Corner</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Bottom&nbsp;Motor&nbsp;Mount</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Bed&nbsp;Mount&nbsp;Right</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Bed&nbsp;Mount&nbsp;Left</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Bottom&nbsp;Extrusion</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Bottom&nbsp;Corner</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Carriage</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">3 x Upright</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">Main</span></th>
+<th style="text-align: right;"><span style="writing-mode: vertical-rl; text-orientation: mixed;">TOTALS</span></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><strong>Vitamins</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Ball bearing F625ZZ 5mm x 16mm x 5mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;9&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Extrusion E2020 x 279.482mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Extrusion E4040 x 1000mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; GT2 2018.57</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Linear rail MGN12 x 800mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Linear rail carriage MGN12H</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Nut M3 x 2.4mm nyloc</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;15&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;48&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;123&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;9&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;18&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;27&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Nut M5 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Pulley GT2OB 20 teeth</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M3 cap x  8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M3 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M3 cap x 20mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M3 grub x  6mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;48&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;108&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M4 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M5 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;9&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;18&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;27&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M5 cap x 14mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M5 cap x 49mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Screw M6 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Stepper motor NEMA17 x 47mm (5x24 shaft)</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;36&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Washer  M3 x 7mm x 0.5mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;48&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;108&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Washer  M4 x 9mm x 0.8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;9&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;18&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;48&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Washer  M5 x 10mm x 1mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp; Washer rubber M6 x 12.5mm x 1.5mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;12&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;45&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;102&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;108&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;24&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;201&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;51&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;6&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;579&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;Total vitamins count</td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><strong>3D printed parts</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;bed_mount_left.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;bed_mount_right.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;bottom_corner.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;bottom_motor_mount.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;carriage.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;idler.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;top_corner.stl</td>
+</tr>
+<tr>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;3&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;.&nbsp;</td>
+<td style="text-align: right;">&nbsp;&nbsp;21&nbsp;</td>
+<td style="text-align: left;">&nbsp;&nbsp;Total 3D printed parts count</td>
+</tr>
+</tbody>
+</table>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="idler_bearing_assembly"></a></p>
+<h2>3 x Idler Bearing Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Ball bearing F625ZZ 5mm x 16mm x 5mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="idler_bearing_assembly" src="assemblies/idler_bearing_assembly_tn.png" /></p>
+<p><img alt="idler_bearing_assembled" src="assemblies/idler_bearing_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="idler_assembly"></a></p>
+<h2>3 x Idler Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Screw M4 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Screw M5 cap x 49mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Washer  M4 x 9mm x 0.8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x idler.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="idler.stl" src="stls/idler.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x idler_bearing_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="idler_bearing_assembled" src="assemblies/idler_bearing_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="idler_assembly" src="assemblies/idler_assembly.png" /></p>
+<p><img alt="idler_assembled" src="assemblies/idler_assembled.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="top_corner_assembly"></a></p>
+<h2>3 x Top Corner Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Extrusion E2020 x 279.482mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Nut M5 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Screw M4 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Screw M5 cap x 14mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Washer  M4 x 9mm x 0.8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x top_corner.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="top_corner.stl" src="stls/top_corner.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x idler_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="idler_assembled" src="assemblies/idler_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="top_corner_assembly" src="assemblies/top_corner_assembly.png" /></p>
+<p><img alt="top_corner_assembled" src="assemblies/top_corner_assembled.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="bottom_motor_mount_assembly"></a></p>
+<h2>3 x Bottom Motor Mount Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Pulley GT2OB 20 teeth</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Screw M3 cap x  8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Screw M3 grub x  6mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Screw M4 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Stepper motor NEMA17 x 47mm (5x24 shaft)</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Washer  M3 x 7mm x 0.5mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Washer  M4 x 9mm x 0.8mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bottom_motor_mount.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bottom_motor_mount.stl" src="stls/bottom_motor_mount.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="bottom_motor_mount_assembly" src="assemblies/bottom_motor_mount_assembly.png" /></p>
+<p><img alt="bottom_motor_mount_assembled" src="assemblies/bottom_motor_mount_assembled.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="bed_mount_right_assembly"></a></p>
+<h2>3 x Bed Mount Right Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Screw M5 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Screw M6 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Washer rubber M6 x 12.5mm x 1.5mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bed_mount_right.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bed_mount_right.stl" src="stls/bed_mount_right.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="bed_mount_right_assembly" src="assemblies/bed_mount_right_assembly_tn.png" /></p>
+<p><img alt="bed_mount_right_assembled" src="assemblies/bed_mount_right_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="bed_mount_left_assembly"></a></p>
+<h2>3 x Bed Mount Left Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Screw M5 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Screw M6 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Washer rubber M6 x 12.5mm x 1.5mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bed_mount_left.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bed_mount_left.stl" src="stls/bed_mount_left.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="bed_mount_left_assembly" src="assemblies/bed_mount_left_assembly_tn.png" /></p>
+<p><img alt="bed_mount_left_assembled" src="assemblies/bed_mount_left_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="bottom_extrusion_assembly"></a></p>
+<h2>3 x Bottom Extrusion Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Extrusion E2020 x 279.482mm</td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bed_mount_left_assembly</th>
+<th>3 x bed_mount_right_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bed_mount_left_assembled" src="assemblies/bed_mount_left_assembled_tn.png" /></td>
+<td><img alt="bed_mount_right_assembled" src="assemblies/bed_mount_right_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="bottom_extrusion_assembly" src="assemblies/bottom_extrusion_assembly_tn.png" /></p>
+<p><img alt="bottom_extrusion_assembled" src="assemblies/bottom_extrusion_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="bottom_corner_assembly"></a></p>
+<h2>3 x Bottom Corner Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Extrusion E2020 x 279.482mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td style="text-align: left;">Nut M4 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">Nut M5 sliding T</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td style="text-align: left;">Screw M4 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">Screw M5 cap x 14mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td style="text-align: left;">Washer  M4 x 9mm x 0.8mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">Washer  M5 x 10mm x 1mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bottom_corner.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bottom_corner.stl" src="stls/bottom_corner.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bottom_extrusion_assembly</th>
+<th>3 x bottom_motor_mount_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bottom_extrusion_assembled" src="assemblies/bottom_extrusion_assembled_tn.png" /></td>
+<td><img alt="bottom_motor_mount_assembled" src="assemblies/bottom_motor_mount_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="bottom_corner_assembly" src="assemblies/bottom_corner_assembly.png" /></p>
+<p><img alt="bottom_corner_assembled" src="assemblies/bottom_corner_assembled.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="carriage_assembly"></a></p>
+<h2>3 x Carriage Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Linear rail carriage MGN12H</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Nut M3 x 2.4mm nyloc</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Screw M3 cap x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Screw M3 cap x 20mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Washer  M3 x 7mm x 0.5mm</td>
+</tr>
+</tbody>
+</table>
+<h3>3D Printed parts</h3>
+<table>
+<thead>
+<tr>
+<th>3 x carriage.stl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="carriage.stl" src="stls/carriage.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="carriage_assembly" src="assemblies/carriage_assembly_tn.png" /></p>
+<p><img alt="carriage_assembled" src="assemblies/carriage_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="upright_assembly"></a></p>
+<h2>3 x Upright Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Extrusion E4040 x 1000mm</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Linear rail MGN12 x 800mm</td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x carriage_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="carriage_assembled" src="assemblies/carriage_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="upright_assembly" src="assemblies/upright_assembly_tn.png" /></p>
+<p><img alt="upright_assembled" src="assemblies/upright_assembled_tn.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>
+<hr />
+<p><a name="main_assembly"></a></p>
+<h2>Main Assembly</h2>
+<h3>Vitamins</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">GT2 2018.57</td>
+</tr>
+</tbody>
+</table>
+<h3>Sub-assemblies</h3>
+<table>
+<thead>
+<tr>
+<th>3 x bottom_corner_assembly</th>
+<th>3 x top_corner_assembly</th>
+<th>3 x upright_assembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="bottom_corner_assembled" src="assemblies/bottom_corner_assembled_tn.png" /></td>
+<td><img alt="top_corner_assembled" src="assemblies/top_corner_assembled_tn.png" /></td>
+<td><img alt="upright_assembled" src="assemblies/upright_assembled_tn.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Assembly instructions</h3>
+<p><img alt="main_assembly" src="assemblies/main_assembly.png" /></p>
+<p>Insert PSU</p>
+<p><img alt="main_assembled" src="assemblies/main_assembled.png" /></p>
+<p><span></span>
+<a href="#TOP">Top</a></p>

@@ -1,0 +1,8 @@
+main_assembly:
+Vitamins:
+  3 GT2 2018.57
+
+Assemblies:
+  3 bottom_corner_assemblies
+  3 top_corner_assemblies
+  3 upright_assemblies

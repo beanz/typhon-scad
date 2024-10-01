@@ -1,0 +1,4 @@
+idler_bearing_assemblies:
+Vitamins:
+  6 Ball bearing F625ZZ 5mm x 16mm x 5mm
+  6 Washer  M5 x 10mm x 1mm
