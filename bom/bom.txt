@@ -1,0 +1,65 @@
+Vitamins:
+             B                  
+             o                  
+          B  t                  
+    B     o  t                  
+ B  e     t  o                  
+ e  d  B  t  m        I         
+ d     o  o           d         
+    m  t  m  m        l         
+ m  o  t     o        e     T   
+ o  u  o  e  t        r     o   
+ u  n  m  x  o  C           p   
+ n  t     t  r  a     b        U
+ t     c  r     r     e     c  p
+    r  o  u  m  r  I  a     o  r
+ l  i  r  s  o  i  d  r  M  r  i
+ e  g  n  i  u  a  l  i  a  n  g
+ f  h  e  o  n  g  e  n  i  e  h
+ t  t  r  n  t  e  r  g  n  r  t
+  |  |  |  |  |  |  |  | 3|  |  |  3 GT2 2018.57
+  |  |  |  | 3|  |  |  |  |  |  |  3 Stepper motor NEMA17 x 47mm (5x24 shaft)
+  |  |  |  |  |  |  | 6|  |  |  |  6 Ball bearing F625ZZ 5mm x 16mm x 5mm
+  |  |  |  |  | 3|  |  |  |  |  |  3 Linear rail carriage MGN12H
+  |  | 3| 3|  |  |  |  |  | 3|  |  9 Extrusion E2020 x 279.482mm
+  |  |  |  |  |  |  |  |  |  | 3|  3 Extrusion E4040 x 1000mm
+  |  |  |  |  | 6|  |  |  |  |  |  6 Nut M3 x 2.4mm nyloc
+  |  |  |  | 3|  |  |  |  |  |  |  3 Pulley GT2OB 20 teeth
+  |  |  |  |  |  |  |  |  |  | 3|  3 Linear rail MGN12 x 800mm
+  |  |  |  |  |12|  |  |  |  |  | 12 Screw M3 cap x 10mm
+  |  |  |  |  | 6|  |  |  |  |  |  6 Screw M3 cap x 20mm
+  |  |  |  |12|  |  |  |  |  |  | 12 Screw M3 cap x  8mm
+  |  |  |  | 6|  |  |  |  |  |  |  6 Screw M3 grub x  6mm
+  |  |48|  |24|  |12|  |  |24|  |108 Screw M4 cap x 10mm
+ 6| 6|  |  |  |  |  |  |  |  |  | 12 Screw M5 cap x 10mm
+  |  |18|  |  |  |  |  |  | 9|  | 27 Screw M5 cap x 14mm
+  |  |  |  |  |  | 3|  |  |  |  |  3 Screw M5 cap x 49mm
+ 3| 3|  |  |  |  |  |  |  |  |  |  6 Screw M6 cap x 10mm
+ 6| 6|48|  |24|  |15|  |  |24|  |123 Nut M4 sliding T
+  |  |18|  |  |  |  |  |  | 9|  | 27 Nut M5 sliding T
+  |  |  |  |12|24|  |  |  |  |  | 36 Washer  M3 x 7mm x 0.5mm
+  |  |48|  |24|  |12|  |  |24|  |108 Washer  M4 x 9mm x 0.8mm
+ 6| 6|18|  |  |  | 3| 6|  | 9|  | 48 Washer  M5 x 10mm x 1mm
+ 3| 3|  |  |  |  |  |  |  |  |  |  6 Washer rubber M6 x 12.5mm x 1.5mm
+
+Printed:
+ 3|  |  |  |  |  |  |  |  |  |  |  3 bed_mount_left.stl
+  | 3|  |  |  |  |  |  |  |  |  |  3 bed_mount_right.stl
+  |  | 3|  |  |  |  |  |  |  |  |  3 bottom_corner.stl
+  |  |  |  | 3|  |  |  |  |  |  |  3 bottom_motor_mount.stl
+  |  |  |  |  | 3|  |  |  |  |  |  3 carriage.stl
+  |  |  |  |  |  | 3|  |  |  |  |  3 idler.stl
+  |  |  |  |  |  |  |  |  | 3|  |  3 top_corner.stl
+
+Assemblies:
+  3 bed_mount_left_assemblies
+  3 bed_mount_right_assemblies
+  3 bottom_corner_assemblies
+  3 bottom_extrusion_assemblies
+  3 bottom_motor_mount_assemblies
+  3 carriage_assemblies
+  3 idler_assemblies
+  3 idler_bearing_assemblies
+  1 main_assembly
+  3 top_corner_assemblies
+  3 upright_assemblies

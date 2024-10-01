@@ -1,0 +1,329 @@
+[
+    {
+        "name": "idler_bearing_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "ball_bearing(BBF625): Ball bearing F625ZZ 5mm x 16mm x 5mm": {
+                "count": 6
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 6
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "idler_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "idler_bearing_assembly": 3
+        },
+        "vitamins": {
+            "washer(M4_washer): Washer  M4 x 9mm x 0.8mm": {
+                "count": 12
+            },
+            "screw(M4_cap_screw, 10): Screw M4 cap x 10mm": {
+                "count": 12
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 15
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 3
+            },
+            "screw(M5_cap_screw, 49): Screw M5 cap x 49mm": {
+                "count": 3
+            }
+        },
+        "printed": {
+            "idler.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "top_corner_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "idler_assembly": 3
+        },
+        "vitamins": {
+            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+                "count": 3
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 9
+            },
+            "screw(M5_cap_screw, 14): Screw M5 cap x 14mm": {
+                "count": 9
+            },
+            "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 9
+            },
+            "washer(M4_washer): Washer  M4 x 9mm x 0.8mm": {
+                "count": 24
+            },
+            "screw(M4_cap_screw, 10): Screw M4 cap x 10mm": {
+                "count": 24
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 24
+            }
+        },
+        "printed": {
+            "top_corner.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "bottom_motor_mount_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "washer(M4_washer): Washer  M4 x 9mm x 0.8mm": {
+                "count": 24
+            },
+            "screw(M4_cap_screw, 10): Screw M4 cap x 10mm": {
+                "count": 24
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 24
+            },
+            "NEMA(NEMA17_47): Stepper motor NEMA17 x 47mm (5x24 shaft)": {
+                "count": 3
+            },
+            "washer(M3_washer): Washer  M3 x 7mm x 0.5mm": {
+                "count": 12
+            },
+            "screw(M3_cap_screw, 8): Screw M3 cap x  8mm": {
+                "count": 12
+            },
+            "pulley(GT2x20ob_pulley): Pulley GT2OB 20 teeth": {
+                "count": 3
+            },
+            "screw(M3_grub_screw, 6): Screw M3 grub x  6mm": {
+                "count": 6
+            }
+        },
+        "printed": {
+            "bottom_motor_mount.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "bed_mount_right_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M6_cap_screw, 10): Screw M6 cap x 10mm": {
+                "count": 3
+            },
+            "washer(M6_washer): Washer rubber M6 x 12.5mm x 1.5mm": {
+                "count": 3
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 6
+            },
+            "screw(M5_cap_screw, 10): Screw M5 cap x 10mm": {
+                "count": 6
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 6
+            }
+        },
+        "printed": {
+            "bed_mount_right.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "bed_mount_left_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M6_cap_screw, 10): Screw M6 cap x 10mm": {
+                "count": 3
+            },
+            "washer(M6_washer): Washer rubber M6 x 12.5mm x 1.5mm": {
+                "count": 3
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 6
+            },
+            "screw(M5_cap_screw, 10): Screw M5 cap x 10mm": {
+                "count": 6
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 6
+            }
+        },
+        "printed": {
+            "bed_mount_left.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "bottom_extrusion_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "bed_mount_left_assembly": 3,
+            "bed_mount_right_assembly": 3
+        },
+        "vitamins": {
+            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+                "count": 3
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "bottom_corner_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "bottom_extrusion_assembly": 3,
+            "bottom_motor_mount_assembly": 3
+        },
+        "vitamins": {
+            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+                "count": 3
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 18
+            },
+            "screw(M5_cap_screw, 14): Screw M5 cap x 14mm": {
+                "count": 18
+            },
+            "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 18
+            },
+            "washer(M4_washer): Washer  M4 x 9mm x 0.8mm": {
+                "count": 48
+            },
+            "screw(M4_cap_screw, 10): Screw M4 cap x 10mm": {
+                "count": 48
+            },
+            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
+                "count": 48
+            }
+        },
+        "printed": {
+            "bottom_corner.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "carriage_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "carriage(MGN12H_carriage): Linear rail carriage MGN12H": {
+                "count": 3
+            },
+            "washer(M3_washer): Washer  M3 x 7mm x 0.5mm": {
+                "count": 24
+            },
+            "screw(M3_cap_screw, 10): Screw M3 cap x 10mm": {
+                "count": 12
+            },
+            "screw(M3_cap_screw, 20): Screw M3 cap x 20mm": {
+                "count": 6
+            },
+            "nut(M3_nut, nyloc = true): Nut M3 x 2.4mm nyloc": {
+                "count": 6
+            }
+        },
+        "printed": {
+            "carriage.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "upright_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "carriage_assembly": 3
+        },
+        "vitamins": {
+            "extrusion(E4040, 1000): Extrusion E4040 x 1000mm": {
+                "count": 3
+            },
+            "rail(MGN12, 800): Linear rail MGN12 x 800mm": {
+                "count": 3
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "main_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "upright_assembly": 3,
+            "bottom_corner_assembly": 3,
+            "top_corner_assembly": 3
+        },
+        "vitamins": {
+            "BELT: GT2 2018.57": {
+                "count": 3
+            }
+        },
+        "printed": {},
+        "routed": {}
+    }
+]

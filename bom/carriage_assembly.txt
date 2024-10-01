@@ -1,0 +1,10 @@
+carriage_assemblies:
+Vitamins:
+  3 Linear rail carriage MGN12H
+  6 Nut M3 x 2.4mm nyloc
+ 12 Screw M3 cap x 10mm
+  6 Screw M3 cap x 20mm
+ 24 Washer  M3 x 7mm x 0.5mm
+
+Printed:
+  3 carriage.stl
