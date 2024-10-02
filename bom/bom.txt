@@ -17,9 +17,9 @@ Vitamins:
  e  g  n  i  u  a  l  i  a  n  g
  f  h  e  o  n  g  e  n  i  e  h
  t  t  r  n  t  e  r  g  n  r  t
-  |  |  |  |  |  |  |  | 3|  |  |  3 GT2 2018.57
   |  |  |  | 3|  |  |  |  |  |  |  3 Stepper motor NEMA17 x 47mm (5x24 shaft)
   |  |  |  |  |  |  | 6|  |  |  |  6 Ball bearing F625ZZ 5mm x 16mm x 5mm
+  |  |  |  |  |  |  |  | 3|  |  |  3 Belt GT2 x 6mm x 2072mm
   |  |  |  |  | 3|  |  |  |  |  |  3 Linear rail carriage MGN12H
   |  | 3| 3|  |  |  |  |  | 3|  |  9 Extrusion E2020 x 279.482mm
   |  |  |  |  |  |  |  |  |  | 3|  3 Extrusion E4040 x 1000mm
