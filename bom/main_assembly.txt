@@ -1,6 +1,6 @@
 main_assembly:
 Vitamins:
-  3 GT2 2018.57
+  3 Belt GT2 x 6mm x 2072mm
 
 Assemblies:
   3 bottom_corner_assemblies
