@@ -3,7 +3,6 @@ include <conf.scad>
 include <lazy.scad>
 include <vitamins.scad>
 
-use <belts.scad>
 use <bottom.scad>
 use <carriage.scad>
 use <top.scad>
@@ -28,24 +27,23 @@ module main_assembly()
 
 module upright_belt() {
   bottom_r = pulley_hub_dia(opulley)/2;
-  bottom_offset = 60/2 - bottom_r;
+  bottom_offset = 60/2;
   top_r = bb_diameter(BBF625)/2;
-  top_offset = delta_h + ew2/2 + top_r;
-  echo("bottom_r", bottom_r);
-  echo("top_r", top_r);
+  top_offset = delta_h + ew2/2;
   rz(90) rx(90)
-    mbelt(GT2x6,
-      [
-       [-bottom_r, carriage_height+5],
-       [-top_r,    top_offset],
-       [ top_r,    top_offset],
-       [ bottom_r, bottom_offset],
-       [-bottom_r, bottom_offset],
-       [-bottom_r, carriage_height-10],
-       [-bottom_r+2.5, carriage_height-7.5],
-       [-bottom_r+5, carriage_height-7.5],
-       [-bottom_r+7.5, carriage_height-10],
-      ]);
+    belt(GT2x6, [
+      [-bottom_r+1, carriage_height+arm_mount_offset+th, 0],
+      [-bottom_r+1, carriage_height+arm_mount_offset, 0],
+      [-bottom_r+3, carriage_height+arm_mount_offset-3, 0],
+      [-bottom_r+7, carriage_height+arm_mount_offset-7, 2],
+      [-bottom_r, carriage_height+arm_mount_offset, 0],
+      [0, top_offset, top_r],
+      [0, bottom_offset, bottom_r],
+      [-bottom_r+6, carriage_height-10, 6],
+      [-bottom_r+10, carriage_height-25, 2],
+      [-bottom_r+10.5, carriage_height-23, 0],
+      [-bottom_r+10.5, carriage_height-11, 0],
+    ], open = true, auto_twist = false);
 }
 
 module upright_assembly() {
@@ -64,4 +62,5 @@ if ($preview) {
   $explode = 0;
   main_assembly();
   //upright_assembly();
+  //upright_belt();
 }
