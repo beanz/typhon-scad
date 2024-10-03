@@ -23,11 +23,12 @@ Vitamins:
   |  |  |  |  | 3|  |  |  |  |  |  3 Linear rail carriage MGN12H
   |  | 3| 3|  |  |  |  |  | 3|  |  9 Extrusion E2020 x 279.482mm
   |  |  |  |  |  |  |  |  |  | 3|  3 Extrusion E4040 x 1000mm
+  |  |  |  |  | 3|  |  |  |  |  |  3 Nut M3 x 2.4mm 
   |  |  |  |  | 6|  |  |  |  |  |  6 Nut M3 x 2.4mm nyloc
   |  |  |  | 3|  |  |  |  |  |  |  3 Pulley GT2OB 20 teeth
   |  |  |  |  |  |  |  |  |  | 3|  3 Linear rail MGN12 x 800mm
   |  |  |  |  |12|  |  |  |  |  | 12 Screw M3 cap x 10mm
-  |  |  |  |  | 6|  |  |  |  |  |  6 Screw M3 cap x 20mm
+  |  |  |  |  | 9|  |  |  |  |  |  9 Screw M3 cap x 20mm
   |  |  |  |12|  |  |  |  |  |  | 12 Screw M3 cap x  8mm
   |  |  |  | 6|  |  |  |  |  |  |  6 Screw M3 grub x  6mm
   |  |48|  |24|  |12|  |  |24|  |108 Screw M4 cap x 10mm
@@ -48,6 +49,7 @@ Printed:
   |  | 3|  |  |  |  |  |  |  |  |  3 bottom_corner.stl
   |  |  |  | 3|  |  |  |  |  |  |  3 bottom_motor_mount.stl
   |  |  |  |  | 3|  |  |  |  |  |  3 carriage.stl
+  |  |  |  |  | 3|  |  |  |  |  |  3 carriage_belt_tensioner.stl
   |  |  |  |  |  | 3|  |  |  |  |  3 idler.stl
   |  |  |  |  |  |  |  |  | 3|  |  3 top_corner.stl
 

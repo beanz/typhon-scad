@@ -273,14 +273,21 @@
                 "count": 12
             },
             "screw(M3_cap_screw, 20): Screw M3 cap x 20mm": {
-                "count": 6
+                "count": 9
             },
             "nut(M3_nut, nyloc = true): Nut M3 x 2.4mm nyloc": {
                 "count": 6
+            },
+            "nut(M3_nut): Nut M3 x 2.4mm ": {
+                "count": 3
             }
         },
         "printed": {
             "carriage.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            },
+            "carriage_belt_tensioner.stl": {
                 "count": 3,
                 "colour": "[0, 0.572549, 0]"
             }
