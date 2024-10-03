@@ -22,6 +22,29 @@ module carriage_assembly() {
             rx(90) nut(M3_nut, nyloc = true);
         }
     }
+    // tensioner screw + nut
+    txyz(carriage_length(car)/2, 2.5,
+         carriage_height(car)+arm_mount_h+3+(belt_width(GT2x6)+clearance)/2) {
+      ry(90) {
+        tz(8) screw(M3_cap_screw, 20);
+        tz(-5) nut(M3_nut);
+      }
+      txz(-10, clearance) carriage_belt_tensioner_stl();
+    }
+  }
+}
+module carriage_belt_tensioner_stl() {
+  belt_w = belt_width(GT2x6);
+  stl("carriage_belt_tensioner") color(print_color) render()
+  difference() {
+    hull() {
+      tx(-.5) cc([1,10,belt_w]);
+      tx(-3) intersection() {
+        cylinder(d = 10, h = belt_w, center = true);
+        tx(-5) cc([6,12,belt_w*2]);
+      }
+    }
+    ry(-90) cylinder(r = screw_clearance_radius(M3_cap_screw), h = 7);
   }
 }
 
@@ -56,7 +79,7 @@ module carriage_stl() {
       // top belt grip
       txyz(top_r, arm_offset, mount_height+3) {
         hull() {
-          ty(th) cylinder(d = belt_gap, h = belt_w);
+          ty(th*2) cylinder(d = belt_gap, h = belt_w);
           cylinder(d = belt_gap, h = belt_w);
         }
         hull() {
@@ -74,19 +97,19 @@ module carriage_stl() {
         // belt entry
         ty(5) rcc([belt_gap, 12, belt_w]);
         // tensioner cleanance
-        txy(-5, 7) hull() {
+        txy(-5.5, 9) hull() {
           rcc([12, 1, belt_w]);
           ty(12) cylinder(d = 12, h = belt_w);
           txy(-6, 12) cylinder(d = belt_gap, h = belt_w);
         }
         // belt grip
         hull() {
-          txy(-11, 19) cylinder(d = belt_gap, h = belt_w);
+          txy(-11, 20) cylinder(d = belt_gap, h = belt_w);
           txy(-11, 0) cylinder(d = belt_gap, h = belt_w);
         }
 
         // nut trap
-        txyz(-6, 3, belt_w/2) {
+        txyz(-5.5, 4, belt_w/2) {
           cc([clearance*2+nut_trap_flat_radius(M3_nut)*2, 
                nut_thickness(M3_nut)+clearance*2, nut_trap_radius(M3_nut)*2+clearance]);
           rx(90) cylinder(r = screw_radius(M3_cap_screw)+clearance,
@@ -127,5 +150,7 @@ module carriage_stl() {
 if ($preview) {
   $explode = 0;
   carriage_assembly();
+  //carriage_belt_tensioner_stl();
+  //carriage_stl();
 }
 
