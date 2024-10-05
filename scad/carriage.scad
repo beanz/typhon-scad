@@ -4,22 +4,22 @@ include <shapes.scad>
 
 include <vitamins.scad>
 
-module carriage_assembly() {
+module carriage_assembly(angle_v = 30, angle_h = 0) {
   assembly("carriage") {
     carriage(car);
     tz(carriage_height(car)) rz(90) carriage_stl();
     carriage_hole_positions(car)
       tz(th) screw_and_washer(M3_cap_screw, 10);
-    mxz(arm_mount_w/2)
       txz(-arm_mount_offset, carriage_height(car)+arm_mount_h) {
-        ty(traxxas_axle_length(Traxxas_5347)/2)
-          rx(90) traxxas(Traxxas_5347);
-        ty(traxxas_axle_length(Traxxas_5347))
-          rx(-90) screw_and_washer(M3_cap_screw, 20);
-        ty(-th*1.5) explode([0, 0, 20], false) {
-          rx(90) washer(M3_washer);
-          ty(-washer_thickness(M3_washer))
-            rx(90) nut(M3_nut, nyloc = true);
+        arm_assembly(angle_v, angle_h);
+        mxz(arm_mount_w/2) {
+          ty(traxxas_axle_length(Traxxas_5347))
+            rx(-90) screw_and_washer(M3_cap_screw, 20);
+          ty(-th*1.5) explode([0, 0, 20], false) {
+            rx(90) washer(M3_washer);
+            ty(-washer_thickness(M3_washer))
+              rx(90) nut(M3_nut, nyloc = true);
+          }
         }
     }
     // tensioner screw + nut
@@ -147,10 +147,30 @@ module carriage_stl() {
   }
 }
 
+module arm_assembly(angle_v = 30, angle_h = 0) assembly("arm") {
+  t = Traxxas_5347;
+  rod_length = arm_length - traxxas_length(t);
+  ty(arm_mount_w/2+traxxas_axle_length(t)/2) rz(angle_h) ry(-angle_v) {
+    ry(90) tz(traxxas_length(t)/2)
+      carbon_fibre_rod(d = traxxas_rod_diameter(t),
+                       l = rod_length);
+    rx(90) tx(arm_length/2) myz(rod_length/2)
+      tx(traxxas_length(t)/2) ry(180) traxxas(t);
+  }
+  ty(-(arm_mount_w/2+traxxas_axle_length(t)/2)) rz(angle_h) ry(-angle_v) {
+    ry(90) tz(traxxas_length(t)/2)
+      carbon_fibre_rod(d = traxxas_rod_diameter(t),
+                       l = rod_length);
+    rx(90) tx(arm_length/2) myz(rod_length/2)
+      tx(traxxas_length(t)/2) ry(180) traxxas(t);
+  }
+}
+
 if ($preview) {
   $explode = 0;
   carriage_assembly();
   //carriage_belt_tensioner_stl();
   //carriage_stl();
+  //arm_assembly(30, 20);
 }
 

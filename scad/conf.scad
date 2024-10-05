@@ -25,11 +25,17 @@ carriage_inserts = false;
 insert_d = 5.2;
 o_insert = [ "F1BM3",   5, 5.4, 5, 3, 5.4, 1.5, 4, 5.4 ];
 
+pos_x = 50+cos($t*360);
+pos_y = 50+sin($t*360);
+pos_z = 90;
+echo(str("$t = ", $t));
+echo(str("pos = [", pos_x, ", ", pos_y, "]"));
 delta_d = 392;
 delta_r = delta_d/2;
 delta_h = 1000;
 arm_mount_w = 46;
 arm_mount_h = 8;
+arm_length = 255;
 bed_mount_width = 140;
 bed_diameter = 260;
 upright_extrusion = E4040;
@@ -42,7 +48,10 @@ idler_mount_offset = 59;
 belt_offset = 47;
 bed_thickness = 4;
 bed_height = 74+bed_thickness; // top of bed is 60+13+1+thickness
-carriage_height = bed_height + 300;
+delta_effector_offset = 33.5;
+effector_arm_w = arm_mount_w;
+effector_thickness = 8;
+effector_hole_r = 50/2;
 ew = extrusion_width(upright_extrusion);
 ew2 = extrusion_height(side_extrusion);
 
@@ -51,6 +60,47 @@ delta_triangle_l = delta_d*sin(60);
 PSU_S_350 = S_300_12;
 sp = spool_200x60;
 sp_h = spool_height(sp);
+
+rod_offset = delta_r-(carriage_height(car)+arm_mount_h+ew/2);
+function tower_x(a, o = rod_offset) = o * cos(a);
+function tower_y(a, o = rod_offset) = o * sin(a);
+function dist(x1,y1,x2,y2) = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+
+pos_dist = sqrt(pos_x*pos_x+pos_y*pos_y);
+upright_a_angle = 210; // front left
+upright_a_x = tower_x(upright_a_angle);
+upright_a_y = tower_y(upright_a_angle);
+carriage_a_dist = dist(upright_a_x, upright_a_y, pos_x, pos_y)-delta_effector_offset;
+carriage_a_z_offset = sqrt(arm_length*arm_length-carriage_a_dist*carriage_a_dist);
+carriage_a_arm_angle_v = acos(carriage_a_z_offset/arm_length);
+carriage_a_arm_angle_h = asin(pos_dist*.5/carriage_a_dist);
+carriage_a_h = bed_height+carriage_a_z_offset;
+echo(str("upright_a = ", upright_a_angle,
+         " = [", upright_a_x, ", ", upright_a_y, "]"));
+
+upright_b_angle = 90;  // middle back
+upright_b_x = tower_x(upright_b_angle);
+upright_b_y = tower_y(upright_b_angle);
+carriage_b_dist = dist(upright_b_x, upright_b_y, pos_x, pos_y)-delta_effector_offset;
+carriage_b_z_offset = sqrt(arm_length*arm_length
+                           -carriage_b_dist*carriage_b_dist);
+carriage_b_arm_angle_v = acos(carriage_b_z_offset/arm_length);
+carriage_b_arm_angle_h = asin(pos_dist*.5/carriage_b_dist);
+carriage_b_h = bed_height+carriage_b_z_offset;
+echo(str("upright_b = ", upright_b_angle,
+         " = [", upright_b_x, ", ", upright_b_y, "]"));
+
+upright_c_angle = 330; // front right
+upright_c_x = tower_x(upright_c_angle);
+upright_c_y = tower_y(upright_c_angle);
+carriage_c_dist = dist(upright_c_x, upright_c_y, pos_x, pos_y)-delta_effector_offset;
+carriage_c_z_offset = sqrt(arm_length*arm_length
+                           -carriage_c_dist*carriage_c_dist);
+carriage_c_arm_angle_v = acos(carriage_c_z_offset/arm_length);
+carriage_c_arm_angle_h = asin(pos_dist*.5/carriage_c_dist);
+carriage_c_h = bed_height+carriage_c_z_offset;
+echo(str("upright_c = ", upright_c_angle,
+         " = [", upright_c_x, ", ", upright_c_y, "]"));
 
 M6_rubber_washer = [
   "M6", 6, 12.5, 1.5, true, 10.6,  9.9, 1.9, M6_penny_washer];
@@ -189,6 +239,7 @@ black_delrin_color = [0.2, 0.2, 0.2];
 bed_color = "#dedede7f";
 bottom_belt_color = [0.6,0.6,0.2];
 top_belt_color = [0.7,0.2,0.2];
+cf_color = "grey";
 
 M12_toothed_washer =
   ["M12 Toothed Washer", 12, undef, 1, false, 21.5, undef, undef, undef];

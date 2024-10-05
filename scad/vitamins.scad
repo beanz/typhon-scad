@@ -2,6 +2,13 @@ include <conf.scad>
 include <lazy.scad>
 include <shapes.scad>
 
+module carbon_fibre_rod(d, l, center = false) {
+  vitamin(str("rod(", d, ", ", l, "): CF rod ", d, "mm x ", l, "mm"));
+  color(cf_color) {
+    cylinder(d = d, h = l, center = center);
+  }
+}
+
 Traxxas_5347 = ["Traxxas 5347", 3, 3, 3.5, 6, 10, 6.3, 24];
 
 function traxxas_name(t) = t[0];
