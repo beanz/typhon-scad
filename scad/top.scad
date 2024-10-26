@@ -86,17 +86,17 @@ module top_corner_stl() {
           }
         }
       }
-      tz(th) rrcf([40+clearance, 40+clearance, 100],2);
+      tz(th) extrusion_cut(e = E4040, l = 100);
 
       top_corner_extrusion_positions(both = true)
-        ry(-90) rcc([20+eta,20+clearance,40+eta]);
+        ry(-90) extrusion_cut(E2020, l = 40+eta, a = [90, 180, 270]);
 
       top_corner_upright_screw_positions(inner = true) tz(-th) {
-        cylinder(r = screw_clearance_radius(M5_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M5_cap_screw), h = ew);
         tz(th+clearance) cylinder(d = 2*clearance+washer_diameter(M5_washer), h = ew);
       }
       top_corner_side_screw_positions() tz(-th)
-        cylinder(r = screw_clearance_radius(M4_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M4_cap_screw), h = ew);
     }
   }
 }

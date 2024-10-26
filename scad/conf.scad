@@ -329,3 +329,21 @@ module corner_extrusion_positions(both = true) {
     children();
   }
 }
+
+module extrusion_aligner(e = E2020, h=1, l = 100) {
+  w = extrusion_channel_width(e);
+  hull() {
+    rcc([w, l, eta]);
+    tz(h-eta) rcc([w-h*2, l, eta]);
+  }
+}
+
+module extrusion_cut(e = E2020, l = 100, a = [0, 90, 180, 270]) {
+  w = extrusion_width(e);
+  tz(l/2) difference() {
+    cc([w, w, l]);
+    for (r = a) {
+      rz(r) tx(w/2+eta) rz(-90) rx(90) extrusion_aligner(e, l = l+eta);
+    }
+  }
+}

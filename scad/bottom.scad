@@ -109,21 +109,21 @@ module bottom_corner_stl() {
         }
       }
       // 4040 cutout
-      tz(20) rrcf([40+clearance, 40+clearance, 100],2);
+      tz(20) extrusion_cut(e = E4040, l = 100);
 
       // 2020 cutouts
       for (z = [0, 40]) tz(z) corner_extrusion_positions()
-        ry(-90) rcc([20+eta,20+clearance,40+eta]);
+        ry(-90) rz(z == 40? 180 : 0) extrusion_cut(E2020, l = 40+eta, a = [0, 90, 270]);
 
       // 4040 screw holes
       bottom_corner_upright_screw_positions() tz(-th) {
-        cylinder(r = screw_clearance_radius(M5_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M5_cap_screw), h = ew+2);
         tz(th+clearance) cylinder(d = 2*clearance+washer_diameter(M5_washer), h = ew);
       }
 
       // 2020 screw holes
       bottom_corner_side_screw_positions() tz(-th)
-        cylinder(r = screw_clearance_radius(M4_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M4_cap_screw), h = ew);
     }
   }
 }
@@ -160,6 +160,7 @@ module bed_mount_stl() {
           rrcf([20, 18, 17], 5);
         }
         rrcf([20, 50, th], 5);
+        tz(eta) ry(180) extrusion_aligner(e = E2020, l = 50);
       }
       tx(4) rz(30)
         cylinder(r = screw_pilot_hole(M6_cap_screw),
