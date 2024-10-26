@@ -29,19 +29,31 @@ module tower_common() {
 
 module tower_a_assembly() assembly("tower_a") {
   upright_a_assembly();
-  tx(-belt_offset) upright_belt(carriage_a_h);
+  if (spectra_drive) {
+    
+  } else {
+    tx(-belt_offset) upright_belt(carriage_a_h);
+  }
   tower_common();
 }
 
 module tower_b_assembly() assembly("tower_b") {
   upright_b_assembly();
-  tx(-belt_offset) upright_belt(carriage_b_h);
+  if (spectra_drive) {
+    
+  } else {
+    tx(-belt_offset) upright_belt(carriage_b_h);
+  }
   tower_common();
 }
 
 module tower_c_assembly() assembly("tower_c") {
   upright_c_assembly();
-  tx(-belt_offset) upright_belt(carriage_c_h);
+  if (spectra_drive) {
+    
+  } else {
+    tx(-belt_offset) upright_belt(carriage_c_h);
+  }
   tower_common();
 }
 

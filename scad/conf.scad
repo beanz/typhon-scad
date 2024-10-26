@@ -12,7 +12,7 @@ include <NopSCADlib/vitamins/inserts.scad>
 include <NopSCADlib/vitamins/spools.scad>
 use <NopSCADlib/vitamins/rod.scad>
 
-printed_z_motor_mount = true;
+spectra_drive = true;
 
 $fn = 72;
 eta = 0.01;
