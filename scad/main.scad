@@ -22,6 +22,126 @@ module main_assembly()
     cylinder(d=bed_diameter, h=bed_thickness);
   myz(ew*1.5) myz((ew*1.5)/2)
     ty(-delta_triangle_r-80) rail_helper_stl();
+  ty(30) duet_assembly();
+}
+
+module duet_assembly() assembly("duet") {
+  b = DuetE;
+  p = pcb_holes(b);
+  mount_l = 40;
+  pad_d = pcb_land_d(b) == 0 ? th : pcb_land_d(b);
+  tz(th*1.5) pcb(b);
+
+  left_pcb_mount_stl();
+  ol = pcb_coord(b, p[1]);
+  txy(ol[0]+26+0.5*mount_l*cos(60), ol[1]+pad_d/2-0.5*mount_l*sin(60)) {
+    rz(30) mxz(10) txz(-th/2-eta, ew2/2) ry(-90)
+      rz(90) extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
+  }
+
+  right_pcb_mount_stl();
+  or = pcb_coord(b, p[2]);
+  txy(or[0]-26-0.5*mount_l*cos(60), or[1]+pad_d/2-0.5*mount_l*sin(60)) {
+    rz(-30) mxz(10) txz(th/2+eta, ew2/2) ry(90)
+      rz(90) extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
+  }
+
+  for (h = p) {
+    o = pcb_coord(b, h);
+    txyz(o[0], o[1], th*1.5+pcb_thickness(b)) screw(M3_cap_screw, 6);
+  }
+}
+
+module left_pcb_mount_stl() stl("left_pcb_mount") {
+  b = DuetE;
+  p = pcb_holes(b);
+  mount_l = 40;
+  pad_d = pcb_land_d(b) == 0 ? th : pcb_land_d(b);
+  hole_d = pcb_hole_d(b);
+  color(print_color) render() difference() {
+    difference() {
+      union() {
+        hull() for (h = [0:1]) {
+          o = pcb_coord(b, p[h]);
+          txy(o[0], o[1]) cylinder(d = pad_d+th, h = th);
+        }
+        hull() {
+          o = pcb_coord(b, p[1]);
+          txy(o[0], o[1]) cylinder(d = pad_d+th, h = th);
+          txy(o[0], o[1]-50) cylinder(d = pad_d+th, h = th);
+          txy(o[0]+26, o[1]+pad_d/2) cylinder(d = th, h = th);
+          txy(o[0]+26+mount_l*cos(60), o[1]+pad_d/2-mount_l*sin(60))
+            cylinder(d = th, h = th);
+        }
+        hull() {
+          o = pcb_coord(b, p[1]);
+          txy(o[0]+26, o[1]+pad_d/2) cylinder(d = th, h = ew2);
+          txy(o[0]+26+mount_l*cos(60), o[1]+pad_d/2-mount_l*sin(60))
+            cylinder(d = th, h = ew2);
+        }
+        for (h = [0:1]) {
+          o = pcb_coord(b, p[h]);
+          txy(o[0], o[1]) cylinder(d = pad_d, h = th*1.5);
+        }
+      }
+      for (h = [0:1]) {
+        o = pcb_coord(b, p[h]);
+        tz(th/4) txy(o[0], o[1])
+          cylinder(r = screw_pilot_hole(M3_cap_screw), h = th*1.25);
+      }
+      o = pcb_coord(b, p[1]);
+      txy(o[0]+26+0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
+        rz(30) mxz(10) txz(-th/2-eta, ew2/2) ry(90)
+          cylinder(r = screw_clearance_radius(M5_cap_screw), h = th*3);
+      }
+    }
+  }
+}
+
+module right_pcb_mount_stl() stl("right_pcb_mount") {
+  b = DuetE;
+  p = pcb_holes(b);
+  mount_l = 40;
+  pad_d = pcb_land_d(b) == 0 ? th : pcb_land_d(b);
+  hole_d = pcb_hole_d(b);
+  color(print_color) render() difference() {
+    difference() {
+      union() {
+        hull() for (h = [2:3]) {
+          o = pcb_coord(b, p[h]);
+          txy(o[0], o[1]) cylinder(d = pad_d+th, h = th);
+        }
+        hull() {
+          o = pcb_coord(b, p[2]);
+          txy(o[0], o[1]) cylinder(d = pad_d+th, h = th);
+          txy(o[0], o[1]-50) cylinder(d = pad_d+th, h = th);
+          txy(o[0]-26, o[1]+pad_d/2) cylinder(d = th, h = th);
+          txy(o[0]-26-mount_l*cos(60), o[1]+pad_d/2-mount_l*sin(60))
+            cylinder(d = th, h = th);
+        }
+        hull() {
+          o = pcb_coord(b, p[2]);
+          txy(o[0]-26, o[1]+pad_d/2) cylinder(d = th, h = ew2);
+          txy(o[0]-26-mount_l*cos(60), o[1]+pad_d/2-mount_l*sin(60))
+            cylinder(d = th, h = ew2);
+        }
+        for (h = [2:3]) {
+          o = pcb_coord(b, p[h]);
+          txy(o[0], o[1]) cylinder(d = pad_d, h = th*1.5);
+        }
+      }
+      for (h = [2:3]) {
+        o = pcb_coord(b, p[h]);
+        tz(th/4) txy(o[0], o[1])
+          cylinder(r = screw_pilot_hole(M3_cap_screw), h = th*1.25);
+      }
+      o = pcb_coord(b, p[2]);
+      txy(o[0]-26-0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
+        rz(-30) mxz(10) txz(th/2+eta, ew2/2) ry(-90)
+          cylinder(r = screw_clearance_radius(M5_cap_screw), h = th*3);
+      }
+    }
+  }
 }
 
 module tower_common() {
