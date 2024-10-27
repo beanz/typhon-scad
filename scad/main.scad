@@ -20,6 +20,8 @@ module main_assembly()
   txyz(pos_x,pos_y,pos_z+effector_thickness/2) effector_assembly();
   color("silver") render() tz(bed_height-bed_thickness)
     cylinder(d=bed_diameter, h=bed_thickness);
+  myz(ew*1.5) myz((ew*1.5)/2)
+    ty(-delta_triangle_r-80) rail_helper_stl();
 }
 
 module tower_common() {
@@ -111,6 +113,15 @@ module rail_guard_stl() stl("rail_guard") {
              h = rh*2);
     tz(th) cylinder(d = 2*clearance+washer_diameter(M5_washer),
              h = rh*2);
+  }
+}
+
+module rail_helper_stl() stl("rail_helper") {
+  h = ew/2+th+rail_height(car_rail);
+  color(print_color) render() difference() {
+    ty(-h/2+ew/2) rrcf([ew+th*2, h, th*2], r = 3);
+    tyz(-rail_height(car_rail)/2, -eta) rcc([rail_width(car_rail), rail_height(car_rail), th*3]);
+    tyz(ew/2,-eta) rcc([ew, ew, th*3]);
   }
 }
 
