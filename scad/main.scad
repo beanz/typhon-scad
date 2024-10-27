@@ -95,8 +95,22 @@ module upright(carriage_h, angle_v = 30, angle_h = 0) {
   txz(-ew/2, -400+delta_h) ry(-90) rz(180) {
     rail(carriage_rail(car), 800);
   }
+  txz(-ew/2, -800+delta_h) ry(-90) rz(180) {
+    rail_guard_stl();
+  }
   txz(-ew/2, carriage_h) ry(-90) rz(180) {
     carriage_assembly(angle_v, angle_h);
+  }
+}
+
+module rail_guard_stl() stl("rail_guard") {
+  rh = rail_height(carriage_rail(car));
+  tx(ew/4) color(print_color) render() difference() {
+    rrcf([ew/2,ew,rh], r = 3);
+    tz(-eta) cylinder(r = screw_clearance_radius(M5_cap_screw),
+             h = rh*2);
+    tz(th) cylinder(d = 2*clearance+washer_diameter(M5_washer),
+             h = rh*2);
   }
 }
 
