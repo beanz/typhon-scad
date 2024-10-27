@@ -333,7 +333,8 @@ module corner_extrusion_positions(both = true) {
 }
 
 module extrusion_aligner(e = E2020, h=1, l = 100) {
-  w = extrusion_channel_width(e);
+  // my 4040 profile has narrower channel
+  w = extrusion_channel_width(e) - (e == E4040 ? 1 : 0);
   hull() {
     rcc([w, l, eta]);
     tz(h-eta) rcc([w-h*2, l, eta]);
