@@ -55,6 +55,8 @@ module idler_stl() stl("idler") {
         cylinder(d = th, h = ew2);
         txy(-40*cos(30), 40*sin(30)) cylinder(d = th, h = ew2);
       }
+      idler_mount_screw_positions() ty(th-eta) rz(90) ry(90)
+        extrusion_aligner(E2020, l = 20);
     }
     idler_mount_screw_positions()
       rx(-90) cylinder(r=screw_clearance_radius(M4_cap_screw),
