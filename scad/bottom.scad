@@ -130,7 +130,7 @@ module bottom_corner_bottom_assembly()
   assembly("bottom_corner_bottom") {
     bottom_corner_bottom_stl();
     bottom_corner_insert_positions() {
-      tz(30) insert(M3Voron);
+      tz(30) insert(M3_Voron_insert);
     }
 }
 
@@ -140,7 +140,7 @@ module bottom_corner_bottom_stl() {
       bottom_corner_model();
       tz(500+30) cube(1000, center = true);
       bottom_corner_insert_positions() tz(30) {
-        tz(-5) cylinder(d = 4.24, h = 100);
+        tz(-5) cylinder(r = insert_hole_radius(M3_Voron_insert), h = 100);
         tz(-8)
           cylinder(r = screw_clearance_radius(M3_cap_screw), h = 100);
       }
