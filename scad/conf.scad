@@ -344,9 +344,9 @@ module extrusion_aligner(e = E2020, h=1, l = 100) {
 module extrusion_cut(e = E2020, l = 100, a = [0, 90, 180, 270]) {
   w = extrusion_width(e);
   tz(l/2) difference() {
-    cc([w, w, l]);
+    cc([w+clearance*2, w+clearance*2, l]);
     for (r = a) {
-      rz(r) tx(w/2+eta) rz(-90) rx(90) extrusion_aligner(e, l = l+eta);
+      rz(r) tx(w/2+clearance+eta) rz(-90) rx(90) extrusion_aligner(e, l = l+eta);
     }
   }
 }

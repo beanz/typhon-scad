@@ -176,7 +176,8 @@ module bottom_corner_model() {
 
     // 2020 cutouts
     for (z = [0, 40]) tz(z) corner_extrusion_positions()
-      ry(-90) rz(z == 40? 180 : 0) extrusion_cut(E2020, l = 40+eta, a = [0, 90, 270]);
+      ry(-90) rz(z == 40? 180 : 0)
+        extrusion_cut(E2020, l = 40+eta, a = [0, 90, 270]);
 
     // 4040 screw holes
     bottom_corner_upright_screw_positions() tz(-th) {
