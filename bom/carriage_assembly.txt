@@ -10,3 +10,6 @@ Vitamins:
 Printed:
   3 carriage.stl
   3 carriage_belt_tensioner.stl
+
+Assemblies:
+  3 arm_assemblies

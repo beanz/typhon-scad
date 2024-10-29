@@ -1,0 +1,3 @@
+arm_assemblies:
+Vitamins:
+  6 CF rod 3mm x 231mm

@@ -1,0 +1,9 @@
+two_part_bottom_corner_assemblies:
+Vitamins:
+ 24 Screw M3 cap x 10mm
+
+Printed:
+  3 bottom_corner_top.stl
+
+Assemblies:
+  3 bottom_corner_bottom_assemblies

@@ -1,6 +1,6 @@
 bottom_corner_assemblies:
 Vitamins:
-  3 Extrusion E2020 x 279.482mm
+  3 Extrusion E2020 x 300mm
  48 Screw M4 cap x 10mm
  18 Screw M5 cap x 14mm
  48 Nut M4 sliding T
@@ -8,9 +8,7 @@ Vitamins:
  48 Washer  M4 x 9mm x 0.8mm
  18 Washer  M5 x 10mm x 1mm
 
-Printed:
-  3 bottom_corner.stl
-
 Assemblies:
   3 bottom_extrusion_assemblies
   3 bottom_motor_mount_assemblies
+  3 two_part_bottom_corner_assemblies

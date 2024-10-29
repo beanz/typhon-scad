@@ -1,7 +1,0 @@
-upright_assemblies:
-Vitamins:
-  3 Extrusion E4040 x 1000mm
-  3 Linear rail MGN12 x 800mm
-
-Assemblies:
-  3 carriage_assemblies

@@ -1,6 +1,6 @@
 top_corner_assemblies:
 Vitamins:
-  3 Extrusion E2020 x 279.482mm
+  3 Extrusion E2020 x 300mm
  24 Screw M4 cap x 10mm
   9 Screw M5 cap x 14mm
  24 Nut M4 sliding T

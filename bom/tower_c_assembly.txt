@@ -1,0 +1,8 @@
+tower_c_assembly:
+Vitamins:
+  1 Belt GT2 x 6mm x 2072mm
+
+Assemblies:
+  1 bottom_corner_assembly
+  1 top_corner_assembly
+  1 upright_c_assembly

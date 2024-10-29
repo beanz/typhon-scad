@@ -1,0 +1,10 @@
+upright_b_assembly:
+Vitamins:
+  1 Extrusion E4040 x 1000mm
+  1 Linear rail MGN12 x 800mm
+
+Printed:
+  1 rail_guard.stl
+
+Assemblies:
+  1 carriage_assembly
