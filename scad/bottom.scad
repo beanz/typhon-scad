@@ -49,14 +49,18 @@ module bottom_motor_mount_stl() stl("bottom_motor_mount") {
   o = motor_mount_offset*tan(30)+th*2*cos(30);
   h = 60;
   color(print_color) render() difference() {
-    tz(10) union() {
-      hull() {
-        tx(-motor_mount_offset) mxz(o) cylinder(d = th, h = h, center = true);
+    union() {
+      tz(10) {
+        hull() {
+          tx(-motor_mount_offset) mxz(o) cylinder(d = th, h = h, center = true);
+        }
+        mxz(o) tx(-motor_mount_offset) hull() {
+          cylinder(d = th, h = h, center = true);
+          txy(-40*cos(30), 40*sin(30)) cylinder(d = th, h = h, center = true);
+        }
       }
-      mxz(o) tx(-motor_mount_offset) hull() {
-        cylinder(d = th, h = h, center = true);
-        txy(-40*cos(30), 40*sin(30)) cylinder(d = th, h = h, center = true);
-      }
+      motor_mount_screw_positions() rz(90) ry(90)
+        tz(th-eta) extrusion_aligner(E2020, l = 20);
     }
     motor_mount_screw_positions()
       rx(-90) cylinder(r=screw_clearance_radius(M4_cap_screw), h = th*3);
@@ -267,8 +271,8 @@ module bed_mount_right_assembly() assembly("bed_mount_right") {
 
 if ($preview) {
   $explode = 0;
-  //bottom_corner_assembly();
-  two_part_bottom_corner_assembly();
+  bottom_corner_assembly();
+  //two_part_bottom_corner_assembly();
   //bed_mount_left_assembly();
   //bed_mount_right_assembly();
   //bottom_motor_mount_assembly();
