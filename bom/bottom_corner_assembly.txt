@@ -1,12 +1,10 @@
 bottom_corner_assemblies:
 Vitamins:
   3 Extrusion E2020 x 300mm
- 48 Screw M4 cap x 10mm
- 18 Screw M5 cap x 14mm
+ 48 Screw M4 flanged x 10mm
+ 18 Screw M5 flanged x 16mm
  48 Nut M4 sliding T
  18 Nut M5 sliding T
- 48 Washer  M4 x 9mm x 0.8mm
- 18 Washer  M5 x 10mm x 1mm
 
 Assemblies:
   3 bottom_extrusion_assemblies
