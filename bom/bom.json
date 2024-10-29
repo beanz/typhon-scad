@@ -1,5 +1,63 @@
 [
     {
+        "name": "duet_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "pcb(DuetE): Duet 2 Ethernet electronics": {
+                "count": 1
+            },
+            ": Micro SD card": {
+                "count": 1
+            },
+            ": Cat 5 patch cable 300mm": {
+                "count": 1
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 4
+            },
+            "screw(M5_cap_screw, 14): Screw M5 cap x 14mm": {
+                "count": 4
+            },
+            "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 4
+            },
+            "screw(M3_cap_screw, 6): Screw M3 cap x  6mm": {
+                "count": 4
+            }
+        },
+        "printed": {
+            "left_pcb_mount.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            },
+            "right_pcb_mount.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "effector_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {},
+        "printed": {
+            "effector.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
         "name": "idler_bearing_assembly",
         "big": null,
         "ngb": false,
@@ -61,7 +119,7 @@
             "idler_assembly": 3
         },
         "vitamins": {
-            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+            "extrusion(E2020, 300): Extrusion E2020 x 300mm": {
                 "count": 3
             },
             "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
@@ -207,11 +265,53 @@
             "bed_mount_right_assembly": 3
         },
         "vitamins": {
-            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+            "extrusion(E2020, 300): Extrusion E2020 x 300mm": {
                 "count": 3
             }
         },
         "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "bottom_corner_bottom_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "insert(M3 Voron Insert): Heatfit insert M3 x 4mm": {
+                "count": 24
+            }
+        },
+        "printed": {
+            "bottom_corner_bottom.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "two_part_bottom_corner_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {
+            "bottom_corner_bottom_assembly": 3
+        },
+        "vitamins": {
+            "screw(M3_cap_screw, 10): Screw M3 cap x 10mm": {
+                "count": 24
+            }
+        },
+        "printed": {
+            "bottom_corner_top.stl": {
+                "count": 3,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
         "routed": {}
     },
     {
@@ -221,11 +321,12 @@
         "zoomed": 0,
         "count": 3,
         "assemblies": {
+            "two_part_bottom_corner_assembly": 3,
             "bottom_extrusion_assembly": 3,
             "bottom_motor_mount_assembly": 3
         },
         "vitamins": {
-            "extrusion(E2020, 279.482): Extrusion E2020 x 279.482mm": {
+            "extrusion(E2020, 300): Extrusion E2020 x 300mm": {
                 "count": 3
             },
             "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
@@ -247,12 +348,22 @@
                 "count": 48
             }
         },
-        "printed": {
-            "bottom_corner.stl": {
-                "count": 3,
-                "colour": "[0, 0.572549, 0]"
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "arm_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 3,
+        "assemblies": {},
+        "vitamins": {
+            "rod(3, 231): CF rod 3mm x 231mm": {
+                "count": 6
             }
         },
+        "printed": {},
         "routed": {}
     },
     {
@@ -261,7 +372,9 @@
         "ngb": false,
         "zoomed": 0,
         "count": 3,
-        "assemblies": {},
+        "assemblies": {
+            "arm_assembly": 3
+        },
         "vitamins": {
             "carriage(MGN12H_carriage): Linear rail carriage MGN12H": {
                 "count": 3
@@ -295,20 +408,132 @@
         "routed": {}
     },
     {
-        "name": "upright_assembly",
+        "name": "upright_c_assembly",
         "big": null,
         "ngb": false,
         "zoomed": 0,
-        "count": 3,
+        "count": 1,
         "assemblies": {
-            "carriage_assembly": 3
+            "carriage_assembly": 1
         },
         "vitamins": {
             "extrusion(E4040, 1000): Extrusion E4040 x 1000mm": {
-                "count": 3
+                "count": 1
             },
             "rail(MGN12, 800): Linear rail MGN12 x 800mm": {
-                "count": 3
+                "count": 1
+            }
+        },
+        "printed": {
+            "rail_guard.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "tower_c_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "upright_c_assembly": 1,
+            "bottom_corner_assembly": 1,
+            "top_corner_assembly": 1
+        },
+        "vitamins": {
+            "belt(GT2x6, [[-7, 319.167, 0], [-7, 314.167, 0], [-5, 311.167, 0], [-1, 307.167, 2], [-8, 314.167, 0], [0, 1010, 8], [0, 30, 8], [-2, 287.717, 6], [2, 272.717, 2], [2.5, 274.717, 0], [2.5, 286.717, 0]]): Belt GT2 x 6mm x 2072mm": {
+                "count": 1
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "upright_b_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "carriage_assembly": 1
+        },
+        "vitamins": {
+            "extrusion(E4040, 1000): Extrusion E4040 x 1000mm": {
+                "count": 1
+            },
+            "rail(MGN12, 800): Linear rail MGN12 x 800mm": {
+                "count": 1
+            }
+        },
+        "printed": {
+            "rail_guard.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "tower_b_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "upright_b_assembly": 1,
+            "bottom_corner_assembly": 1,
+            "top_corner_assembly": 1
+        },
+        "vitamins": {
+            "belt(GT2x6, [[-7, 336.496, 0], [-7, 331.496, 0], [-5, 328.496, 0], [-1, 324.496, 2], [-8, 331.496, 0], [0, 1010, 8], [0, 30, 8], [-2, 305.046, 6], [2, 290.046, 2], [2.5, 292.046, 0], [2.5, 304.046, 0]]): Belt GT2 x 6mm x 2072mm": {
+                "count": 1
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "upright_a_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "carriage_assembly": 1
+        },
+        "vitamins": {
+            "extrusion(E4040, 1000): Extrusion E4040 x 1000mm": {
+                "count": 1
+            },
+            "rail(MGN12, 800): Linear rail MGN12 x 800mm": {
+                "count": 1
+            }
+        },
+        "printed": {
+            "rail_guard.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "tower_a_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "upright_a_assembly": 1,
+            "bottom_corner_assembly": 1,
+            "top_corner_assembly": 1
+        },
+        "vitamins": {
+            "belt(GT2x6, [[-7, 253.532, 0], [-7, 248.532, 0], [-5, 245.532, 0], [-1, 241.532, 2], [-8, 248.532, 0], [0, 1010, 8], [0, 30, 8], [-2, 222.082, 6], [2, 207.082, 2], [2.5, 209.082, 0], [2.5, 221.082, 0]]): Belt GT2 x 6mm x 2072mm": {
+                "count": 1
             }
         },
         "printed": {},
@@ -321,16 +546,19 @@
         "zoomed": 0,
         "count": 1,
         "assemblies": {
-            "upright_assembly": 3,
-            "bottom_corner_assembly": 3,
-            "top_corner_assembly": 3
+            "tower_a_assembly": 1,
+            "tower_b_assembly": 1,
+            "tower_c_assembly": 1,
+            "effector_assembly": 1,
+            "duet_assembly": 1
         },
-        "vitamins": {
-            "belt(GT2x6, [[-7, 399.45, 0], [-7, 394.45, 0], [-5, 391.45, 0], [-1, 387.45, 2], [-8, 394.45, 0], [0, 1010, 8], [0, 30, 8], [-2, 368, 6], [2, 353, 2], [2.5, 355, 0], [2.5, 367, 0]]): Belt GT2 x 6mm x 2072mm": {
-                "count": 3
+        "vitamins": {},
+        "printed": {
+            "rail_helper.stl": {
+                "count": 4,
+                "colour": "[0, 0.572549, 0]"
             }
         },
-        "printed": {},
         "routed": {}
     }
 ]

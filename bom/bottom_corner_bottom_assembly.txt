@@ -1,0 +1,6 @@
+bottom_corner_bottom_assemblies:
+Vitamins:
+ 24 Heatfit insert M3 x 4mm
+
+Printed:
+  3 bottom_corner_bottom.stl
