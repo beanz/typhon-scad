@@ -1,75 +1,73 @@
 Vitamins:
-                                                    T         
-                                                    w         
-             B                                      o         
-             o                                                
-             t     B                                p         
-             t     o                                a         
-             o  B  t                                r         
-       B     m  o  t                                t         
-    B  e        t  o                                          
-    e  d  B  c  t  m              I                 b         
-    d     o  o  o                 d                 o         
-       m  t  r  m  m              l                 t         
-    m  o  t  n     o              e     T           t         
-    o  u  o  e  e  t              r     o           o  U  U  U
-    u  n  m  r  x  o  C     E           p           m  p  p  p
-    n  t        t  r  a     f     b        T  T  T     r  r  r
-    t     c  b  r     r     f     e     c  o  o  o  c  i  i  i
-       r  o  o  u  m  r     e  I  a     o  w  w  w  o  g  g  g
-    l  i  r  t  s  o  i  D  c  d  r  M  r  e  e  e  r  h  h  h
- A  e  g  n  t  i  u  a  u  t  l  i  a  n  r  r  r  n  t  t  t
- r  f  h  e  o  o  n  g  e  o  e  n  i  e           e         
- m  t  t  r  m  n  t  e  t  r  r  g  n  r  a  b  c  r  a  b  c
-  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 Cat 5 patch cable 300mm
-  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 Micro SD card
-  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Stepper motor NEMA17 x 47mm (5x24 shaft)
-  |  |  |  |  |  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  6 Ball bearing F625ZZ 5mm x 16mm x 5mm
-  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
-  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Linear rail carriage MGN12H
-  |  |  | 3|  | 3|  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  9 Extrusion E2020 x 300mm
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1| 1| 1|  3 Extrusion E4040 x 1000mm
-  |  |  |  |24|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 24 Heatfit insert M3 x 4mm
-  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Nut M3 x 2.4mm 
-  |  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Nut M3 x 2.4mm nyloc
-  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 Duet 2 Ethernet electronics
-  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Pulley GT2OB 20 teeth
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1| 1| 1|  3 Linear rail MGN12 x 800mm
- 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 CF rod 3mm x 231mm
-  |  |  |  |  |  |  |12|  |  |  |  |  |  |  |  |  |24|  |  |  | 36 Screw M3 cap x 10mm
-  |  |  |  |  |  |  | 9|  |  |  |  |  |  |  |  |  |  |  |  |  |  9 Screw M3 cap x 20mm
-  |  |  |  |  |  |  |  | 4|  |  |  |  |  |  |  |  |  |  |  |  |  4 Screw M3 cap x  6mm
-  |  |  |  |  |  |12|  |  |  |  |  |  |  |  |  |  |  |  |  |  | 12 Screw M3 cap x  8mm
-  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Screw M3 grub x  6mm
-  |  |  |48|  |  |24|  |  |  |12|  |  |24|  |  |  |  |  |  |  |108 Screw M4 cap x 10mm
-  | 6| 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 12 Screw M5 cap x 10mm
-  |  |  |18|  |  |  |  | 4|  |  |  |  | 9|  |  |  |  |  |  |  | 31 Screw M5 cap x 14mm
-  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  3 Screw M5 cap x 49mm
-  | 3| 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Screw M6 cap x 10mm
-  | 6| 6|48|  |  |24|  |  |  |15|  |  |24|  |  |  |  |  |  |  |123 Nut M4 sliding T
-  |  |  |18|  |  |  |  | 4|  |  |  |  | 9|  |  |  |  |  |  |  | 31 Nut M5 sliding T
-  |  |  |  |  |  |12|24|  |  |  |  |  |  |  |  |  |  |  |  |  | 36 Washer  M3 x 7mm x 0.5mm
-  |  |  |48|  |  |24|  |  |  |12|  |  |24|  |  |  |  |  |  |  |108 Washer  M4 x 9mm x 0.8mm
-  | 6| 6|18|  |  |  |  | 4|  | 3| 6|  | 9|  |  |  |  |  |  |  | 52 Washer  M5 x 10mm x 1mm
-  | 3| 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Washer rubber M6 x 12.5mm x 1.5mm
+                                                       T         
+                                                       w         
+             B                                         o         
+             o                                                   
+             t     B                                   p         
+             t     o                                   a         
+             o  B  t                                   r         
+       B     m  o  t                                   t         
+    B  e        t  o                                             
+    e  d  B  c  t  m              I                    b         
+    d     o  o  o                 d                    o         
+       m  t  r  m  m              l                    t         
+    m  o  t  n     o              e     R  T           t         
+    o  u  o  e  e  t              r     a  o           o  U  U  U
+    u  n  m  r  x  o  C     E           i  p           m  p  p  p
+    n  t        t  r  a     f     b     l     T  T  T     r  r  r
+    t     c  b  r     r     f     e        c  o  o  o  c  i  i  i
+       r  o  o  u  m  r     e  I  a     g  o  w  w  w  o  g  g  g
+    l  i  r  t  s  o  i  D  c  d  r  M  u  r  e  e  e  r  h  h  h
+ A  e  g  n  t  i  u  a  u  t  l  i  a  a  n  r  r  r  n  t  t  t
+ r  f  h  e  o  o  n  g  e  o  e  n  i  r  e           e         
+ m  t  t  r  m  n  t  e  t  r  r  g  n  d  r  a  b  c  r  a  b  c
+  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  |  1 Cat 5 patch cable 300mm
+  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  |  1 Micro SD card
+  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Stepper motor NEMA17 x 47mm (5x24 shaft)
+  |  |  |  |  |  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  6 Ball bearing F625ZZ 5mm x 16mm x 5mm
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  1 Belt GT2 x 6mm x 2072mm
+  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Linear rail carriage MGN12H
+  |  |  | 3|  | 3|  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  9 Extrusion E2020 x 300mm
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1| 1| 1|  3 Extrusion E4040 x 1000mm
+  |  |  |  |24|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 24 Heatfit insert M3 x 4mm
+  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Nut M3 x 2.4mm 
+  |  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Nut M3 x 2.4mm nyloc
+  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  |  1 Duet 2 Ethernet electronics
+  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 Pulley GT2OB 20 teeth
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1| 1| 1|  3 Linear rail MGN12 x 800mm
+ 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 CF rod 3mm x 231mm
+  |  |  |  |  |  |  |12|  |  |  |  |  |  |  |  |  |  |24|  |  |  | 36 Screw M3 cap x 10mm
+  |  |  |  |  |  |  | 9|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  9 Screw M3 cap x 20mm
+  |  |  |  |  |  |  |  | 4|  |  |  |  |  |  |  |  |  |  |  |  |  |  4 Screw M3 cap x  6mm
+  |  |  |  |  |  |12|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 12 Screw M3 cap x  8mm
+  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Screw M3 grub x  6mm
+  | 6| 6|48|  |  |24|  |  |  |12|  |  |  |24|  |  |  |  |  |  |  |120 Screw M4 flanged x 10mm
+  |  |  |18|  |  |  |  | 4|  |  |  |  | 3| 9|  |  |  |  |  |  |  | 34 Screw M5 flanged x 16mm
+  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  3 Screw M5 flanged x 49mm
+  | 3| 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Screw M6 cap x 10mm
+  | 6| 6|48|  |  |24|  |  |  |15|  |  | 3|24|  |  |  |  |  |  |  |126 Nut M4 sliding T
+  |  |  |18|  |  |  |  | 4|  |  |  |  |  | 9|  |  |  |  |  |  |  | 31 Nut M5 sliding T
+  |  |  |  |  |  |12|24|  |  |  |  |  |  |  |  |  |  |  |  |  |  | 36 Washer  M3 x 7mm x 0.5mm
+  |  |  |  |  |  |  |  |  |  |  | 6|  |  |  |  |  |  |  |  |  |  |  6 Washer  M5 x 10mm x 1mm
+  | 3| 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  6 Washer rubber M6 x 12.5mm x 1.5mm
 
 Printed:
-  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bed_mount_left.stl
-  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bed_mount_right.stl
-  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bottom_corner_bottom.stl
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  3 bottom_corner_top.stl
-  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bottom_motor_mount.stl
-  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  3 carriage.stl
-  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  3 carriage_belt_tensioner.stl
-  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  1 effector.stl
-  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  3 idler.stl
-  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 left_pcb_mount.stl
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1| 1| 1|  3 rail_guard.stl
-  |  |  |  |  |  |  |  |  |  |  |  | 4|  |  |  |  |  |  |  |  |  4 rail_helper.stl
-  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 right_pcb_mount.stl
-  |  |  |  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  3 top_corner.stl
+  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bed_mount_left.stl
+  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bed_mount_right.stl
+  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bottom_corner_bottom.stl
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  3 bottom_corner_top.stl
+  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 bottom_motor_mount.stl
+  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 carriage.stl
+  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3 carriage_belt_tensioner.stl
+  |  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  1 effector.stl
+  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  |  |  |  3 idler.stl
+  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  |  1 left_pcb_mount.stl
+  |  |  |  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  |  3 rail_guard.stl
+  |  |  |  |  |  |  |  |  |  |  |  | 4|  |  |  |  |  |  |  |  |  |  4 rail_helper.stl
+  |  |  |  |  |  |  |  | 1|  |  |  |  |  |  |  |  |  |  |  |  |  |  1 right_pcb_mount.stl
+  |  |  |  |  |  |  |  |  |  |  |  |  |  | 3|  |  |  |  |  |  |  |  3 top_corner.stl
 
 Assemblies:
   3 arm_assemblies
@@ -85,6 +83,7 @@ Assemblies:
   3 idler_assemblies
   3 idler_bearing_assemblies
   1 main_assembly
+  3 rail_guard_assemblies
   3 top_corner_assemblies
   1 tower_a_assembly
   1 tower_b_assembly
