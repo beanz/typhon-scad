@@ -83,6 +83,11 @@ module left_pcb_mount_stl() stl("left_pcb_mount") {
           o = pcb_coord(b, p[h]);
           txy(o[0], o[1]) cylinder(d = pad_d, h = th*1.5);
         }
+        o = pcb_coord(b, p[1]);
+        txy(o[0]+26+0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
+          rz(30) mxz(10) txz(-th/2-eta, ew2/2) ry(90)
+            tz(th-eta) extrusion_aligner(e = E2020, l = 20);
+        }
       }
       for (h = [0:1]) {
         o = pcb_coord(b, p[h]);
@@ -128,6 +133,11 @@ module right_pcb_mount_stl() stl("right_pcb_mount") {
         for (h = [2:3]) {
           o = pcb_coord(b, p[h]);
           txy(o[0], o[1]) cylinder(d = pad_d, h = th*1.5);
+        }
+        o = pcb_coord(b, p[2]);
+        txy(o[0]-26-0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
+          rz(-30) mxz(10) txz(th/2+eta, ew2/2) ry(-90)
+            tz(th-eta) extrusion_aligner(e = E2020, l = 20);
         }
       }
       for (h = [2:3]) {
@@ -250,9 +260,10 @@ module rail_helper_stl() stl("rail_helper") {
 }
 
 if ($preview) {
-  $explode = 1;
-  //main_assembly();
-  tower_a_assembly();
+  $explode = 0;
+  main_assembly();
+  //duet_assembly();
+  //tower_a_assembly();
   //upright_a_assembly();
   //rail_guard_assembly();
   //upright_belt();
