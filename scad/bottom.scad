@@ -15,7 +15,7 @@ module bottom_corner_assembly() assembly("bottom_corner") {
     extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
 
   bottom_corner_side_screw_positions()
-    extrusion_screw(M4_cap_screw, 10);
+    extrusion_screw(M4_cap_screw, 12);
 
   bottom_motor_mount_assembly();
 }
@@ -234,8 +234,8 @@ module bed_mount_stl() {
       tx(4) rz(30)
         cylinder(r = screw_pilot_hole(M6_cap_screw),
                  h = 60, center = true);
-      mxz(50/2-th-screw_radius(M5_cap_screw)) {
-        cylinder(r = screw_clearance_radius(M5_cap_screw),
+      mxz(50/2-th-screw_radius(M4_cap_screw)) {
+        cylinder(r = screw_clearance_radius(M4_cap_screw),
                  h = th*3, center = true);
       }
       txy(delta_triangle_r+ew2, bed_mount_width/2) {
@@ -251,8 +251,8 @@ module bed_mount_left_assembly() assembly("bed_mount_left") {
     tz(washer_thickness(M6_washer)) screw(M6_cap_screw, 10);
     washer(M6_rubber_washer);
   }
-  tz(th) mxz(50/2-th-screw_radius(M5_cap_screw))
-    rz(90) extrusion_screw(M5_cap_screw, 10);
+  tz(th) mxz(50/2-th-screw_radius(M4_cap_screw))
+    rz(90) extrusion_screw(M4_cap_screw, 12);
 }
 
 module bed_mount_right_assembly() assembly("bed_mount_right") {
@@ -261,8 +261,8 @@ module bed_mount_right_assembly() assembly("bed_mount_right") {
     tz(washer_thickness(M6_washer)) screw(M6_cap_screw, 10);
     washer(M6_rubber_washer);
   }
-  tz(th) mxz(50/2-th-screw_radius(M5_cap_screw))
-    rz(90) extrusion_screw(M5_cap_screw, 10);
+  tz(th) mxz(50/2-th-screw_radius(M4_cap_screw))
+    rz(90) extrusion_screw(M4_cap_screw, 12);
 }
 
 if ($preview) {
