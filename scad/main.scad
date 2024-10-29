@@ -36,14 +36,14 @@ module duet_assembly() assembly("duet") {
   ol = pcb_coord(b, p[1]);
   txy(ol[0]+26+0.5*mount_l*cos(60), ol[1]+pad_d/2-0.5*mount_l*sin(60)) {
     rz(30) mxz(10) txz(-th/2-eta, ew2/2) ry(-90)
-      rz(90) extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
+      rz(90) extrusion_screw(M5_flanged_screw, 16, M5_sliding_t_nut);
   }
 
   right_pcb_mount_stl();
   or = pcb_coord(b, p[2]);
   txy(or[0]-26-0.5*mount_l*cos(60), or[1]+pad_d/2-0.5*mount_l*sin(60)) {
     rz(-30) mxz(10) txz(th/2+eta, ew2/2) ry(90)
-      rz(90) extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
+      rz(90) extrusion_screw(M5_flanged_screw, 16, M5_sliding_t_nut);
   }
 
   for (h = p) {
@@ -92,7 +92,7 @@ module left_pcb_mount_stl() stl("left_pcb_mount") {
       o = pcb_coord(b, p[1]);
       txy(o[0]+26+0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
         rz(30) mxz(10) txz(-th/2-eta, ew2/2) ry(90)
-          cylinder(r = screw_clearance_radius(M5_cap_screw), h = th*3);
+          cylinder(r = screw_clearance_radius(M5_flanged_screw), h = th*3);
       }
     }
   }
@@ -138,7 +138,7 @@ module right_pcb_mount_stl() stl("right_pcb_mount") {
       o = pcb_coord(b, p[2]);
       txy(o[0]-26-0.5*mount_l*cos(60), o[1]+pad_d/2-0.5*mount_l*sin(60)) {
         rz(-30) mxz(10) txz(th/2+eta, ew2/2) ry(-90)
-          cylinder(r = screw_clearance_radius(M5_cap_screw), h = th*3);
+          cylinder(r = screw_clearance_radius(M5_flanged_screw), h = th*3);
       }
     }
   }
@@ -218,18 +218,22 @@ module upright(carriage_h, angle_v = 30, angle_h = 0) {
     rail(carriage_rail(car), 800);
   }
   txz(-ew/2, -800+delta_h) ry(-90) rz(180) {
-    rail_guard_stl();
+    rail_guard_assembly();
   }
   txz(-ew/2, carriage_h) ry(-90) rz(180) {
     carriage_assembly(angle_v, angle_h);
   }
+}
+module rail_guard_assembly() assembly("rail_guard") {
+  rail_guard_stl();
+  txz(ew/4, th) extrusion_screw(M5_flanged_screw, 16);
 }
 
 module rail_guard_stl() stl("rail_guard") {
   rh = rail_height(carriage_rail(car));
   tx(ew/4) color(print_color) render() difference() {
     rrcf([ew/2,ew,rh], r = 3);
-    tz(-eta) cylinder(r = screw_clearance_radius(M5_cap_screw),
+    tz(-eta) cylinder(r = screw_clearance_radius(M5_flanged_screw),
              h = rh*2);
     tz(th) cylinder(d = 2*clearance+washer_diameter(M5_washer),
              h = rh*2);
@@ -246,8 +250,10 @@ module rail_helper_stl() stl("rail_helper") {
 }
 
 if ($preview) {
-  $explode = 0;
-  main_assembly();
-  //upright_assembly();
+  $explode = 1;
+  //main_assembly();
+  tower_a_assembly();
+  //upright_a_assembly();
+  //rail_guard_assembly();
   //upright_belt();
 }

@@ -9,19 +9,19 @@ module top_corner_assembly() assembly("top_corner") {
     ry(-90) extrusion(side_extrusion, delta_triangle_l-60, center = false);
 
   top_corner_upright_screw_positions()
-    rz(90) extrusion_screw(M5_cap_screw, 14, M5_sliding_t_nut);
+    rz(90) extrusion_screw(M5_flanged_screw, 16, M5_sliding_t_nut);
 
   top_corner_side_screw_positions()
-    extrusion_screw(M4_cap_screw, 10);
+    extrusion_screw(M4_flanged_screw, 10);
 
   tz(th) idler_assembly();
 }
 
 module idler_assembly() assembly("idler") {
   idler_stl();
-  idler_mount_screw_positions() rx(90) extrusion_screw(M4_cap_screw, 10);
+  idler_mount_screw_positions() rx(90) extrusion_screw(M4_flanged_screw, 10);
   txz(-idler_mount_offset-th/2, ew2/2) ry(-90)
-    extrusion_screw(M5_cap_screw, idler_mount_offset-ew/4);
+    extrusion_screw(M5_flanged_screw, idler_mount_offset-ew/4);
   if (spectra_drive) {
     
   } else {
@@ -59,10 +59,10 @@ module idler_stl() stl("idler") {
         extrusion_aligner(E2020, l = 20);
     }
     idler_mount_screw_positions()
-      rx(-90) cylinder(r=screw_clearance_radius(M4_cap_screw),
+      rx(-90) cylinder(r=screw_clearance_radius(M4_flanged_screw),
                        h = th*3);
     txz(-idler_mount_offset, ew2/2) ry(90)
-      cylinder(r = screw_clearance_radius(M5_cap_screw),
+      cylinder(r = screw_clearance_radius(M5_flanged_screw),
                h = th*3, center = true);
   }
 }
@@ -98,11 +98,11 @@ module top_corner_stl() {
         ry(-90) extrusion_cut(E2020, l = 40+eta, a = [90, 180, 270]);
 
       top_corner_upright_screw_positions(inner = true) tz(-th) {
-        tz(-2) cylinder(r = screw_clearance_radius(M5_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M5_flanged_screw), h = ew);
         tz(th+clearance) cylinder(d = 2*clearance+washer_diameter(M5_washer), h = ew);
       }
       top_corner_side_screw_positions() tz(-th)
-        tz(-2) cylinder(r = screw_clearance_radius(M4_cap_screw), h = ew);
+        tz(-2) cylinder(r = screw_clearance_radius(M4_flanged_screw), h = ew);
     }
   }
 }

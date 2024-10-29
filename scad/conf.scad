@@ -118,7 +118,7 @@ ms = medium_microswitch;
 car_screw = M3_cap_screw;
 
 module extrusion_screw(s, l, n = M4_sliding_t_nut) {
-  screw_and_washer(s, l);
+  screw(s, l);
   tz(-l+nut_thickness(n)) vflip() sliding_t_nut(n);
 }
 
@@ -254,15 +254,15 @@ hotend_offset = -2;
 idler_screw = M3_cap_screw;
 motor_screw = M3_cap_screw;
 pcb_mount_screw = M3_cap_screw;
-ex_screw = M4_cap_screw;
+ex_screw = M4_flanged_screw;
 ex_screw_l = 10;
 nema_plate_screw = M5_low_profile_screw;
 ex_print_screw = M4_flanged_screw;
 ex_tap_screw = M5_flanged_screw;
-bed_level_screw = M5_cap_screw;
+bed_level_screw = M5_flanged_screw;
 microswitch_screw = M3_cap_screw; // Tap the microswitch
 foot_screw = ex_tap_screw;
-psu_screw = M4_cap_screw;
+psu_screw = M4_flanged_screw;
 psu_low_screw = M4_flanged_screw;
 opulley = GT2x20ob_pulley; // TOFIX: GT2x20_ooznest_pulley;
 
