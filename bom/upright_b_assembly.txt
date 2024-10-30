@@ -2,6 +2,7 @@ upright_b_assembly:
 Vitamins:
   1 Extrusion E4040 x 1000mm
   1 Linear rail MGN12 x 800mm
+ 18 Screw M3 cap x 16mm
 
 Assemblies:
   1 carriage_assembly
