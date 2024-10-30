@@ -1,7 +1,7 @@
 rail_guard_assemblies:
 Vitamins:
   3 Screw M5 flanged x 16mm
-  3 Nut M4 sliding T
+  3 Nut M5 sliding T
 
 Printed:
   3 rail_guard.stl
