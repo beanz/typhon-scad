@@ -21,7 +21,7 @@ module idler_assembly() assembly("idler") {
   idler_stl();
   idler_mount_screw_positions() rx(90) extrusion_screw(M4_flanged_screw, 10);
   txz(-idler_mount_offset-th/2, ew2/2) ry(-90)
-    extrusion_screw(M5_flanged_screw, idler_mount_offset-ew/4);
+    extrusion_screw(M5_flanged_screw, idler_mount_offset-ew/4, M5_sliding_t_nut);
   if (spectra_drive) {
     
   } else {

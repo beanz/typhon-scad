@@ -238,7 +238,7 @@ module upright(carriage_h, angle_v = 30, angle_h = 0) {
 }
 module rail_guard_assembly() assembly("rail_guard") {
   rail_guard_stl();
-  txz(ew/4, th) extrusion_screw(M5_flanged_screw, 16);
+  txz(ew/4, th) extrusion_screw(M5_flanged_screw, 16, M5_sliding_t_nut);
 }
 
 module rail_guard_stl() stl("rail_guard") {
