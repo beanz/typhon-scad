@@ -226,6 +226,8 @@ module upright(carriage_h, angle_v = 30, angle_h = 0) {
   tz(ew2) extrusion(upright_extrusion, delta_h, center = false);
   txz(-ew/2, -400+delta_h) ry(-90) rz(180) {
     rail(carriage_rail(car), 800);
+    rail_hole_positions(carriage_rail(car), 800,
+      screws = 9, both_ends = true) screw(M3_cap_screw, 16);
   }
   txz(-ew/2, -800+delta_h) ry(-90) rz(180) {
     rail_guard_assembly();
