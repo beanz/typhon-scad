@@ -27,6 +27,8 @@ insert_d = 5.2;
 o_insert = [ "F1BM3",   5, 5.4, 5, 3, 5.4, 1.5, 4, 5.4 ];
 M3_Voron_insert = [ "M3 Voron Insert",
               4, 5, 4.5, 3,   4.25, 1.0, 4.6, 4.3 ];
+idler_pulley = ["GT2x16_id5_toothed_idler", "GT2", 16,  9.75, GT2x6,  6.5,  14, 0,   5, 14.0, 1.0, 0, 0,    false,         0];
+
 pos_x = 50+cos($t*360);
 pos_y = 50+sin($t*360);
 pos_z = 90;

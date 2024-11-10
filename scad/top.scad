@@ -25,21 +25,26 @@ module idler_assembly() assembly("idler") {
   if (spectra_drive) {
     
   } else {
-    txz(-belt_offset, ew2/2) ry(-90) idler_bearing_assembly();
-    txz(-idler_mount_offset-th/2, ew2/2) ry(90)
+    txz(-belt_offset, ew2/2) ry(-90) tz(-pulley_height(idler_pulley)/2) pulley(idler_pulley);
+    txz(th-idler_mount_offset-th/2, 1+th+ew2/2) ry(90)
       idler_spacers_stl();
   }
 }
 
-module idler_spacers_stl() stl("idler_spacers") {
-  color(print_color) render() difference() {
-    tz(th) union() {
-      cylinder(d = washer_diameter(M5_washer), h = 3.5);
-      tz(1.5+2*washer_thickness(M5_washer)*2+ball_bearing_h(BBF625)*2)
-        cylinder(d = washer_diameter(M5_washer), h = 16);
+module spacer(id = 2*(clearance+screw_clearance_radius(M5_flanged_screw)), od = washer_diameter(M5_washer), l = 10) {
+  difference() {
+    union() {
+      cylinder(d = od, h = l-2);
+      tz(l-2-eta) cylinder(d1 = od, d2 = id, h = 2);
     }
-    cylinder(r = screw_clearance_radius(M5_flanged_screw),
-             h = 1000, center = true);
+    tz(-eta) cylinder(d = id, h = l+eta*2);
+  }
+}
+
+module idler_spacers_stl() stl("idler_spacers") {
+  color(print_color) render() {
+    spacer(l = 5);
+    tz(5.2+pulley_height(idler_pulley)) tz(17.5) rx(180) spacer(l = 17.5);
   }
 }
 
