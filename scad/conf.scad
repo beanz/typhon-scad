@@ -65,7 +65,7 @@ PSU_S_350 = S_300_12;
 sp = spool_200x60;
 sp_h = spool_height(sp);
 
-rod_offset = delta_r-(carriage_height(car)+arm_mount_h+ew/2);
+rod_offset = delta_r-(carriage_height(car)+arm_mount_h+ew/2)-delta_effector_offset;
 function tower_x(a, o = rod_offset) = o * cos(a);
 function tower_y(a, o = rod_offset) = o * sin(a);
 function dist(x1,y1,x2,y2) = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
