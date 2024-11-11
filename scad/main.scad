@@ -7,6 +7,7 @@ use <bottom.scad>
 use <effector.scad>
 use <carriage.scad>
 use <top.scad>
+use <spool-mount.scad>
 
 echo(delta_triangle_l-60);
 //! Insert PSU
@@ -23,6 +24,8 @@ module main_assembly()
   myz(ew*1.5) myz((ew*1.5)/2)
     ty(-delta_triangle_r-80) rail_helper_stl();
   ty(30) duet_assembly();
+  rz(upright_c_angle) txz(delta_r+ew/2, delta_h*0.75) ry(90) rz(90)
+    spool_mount_assembly();
 }
 
 module duet_assembly() assembly("duet") {
