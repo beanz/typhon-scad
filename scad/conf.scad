@@ -12,6 +12,7 @@ include <NopSCADlib/vitamins/inserts.scad>
 include <NopSCADlib/vitamins/spools.scad>
 use <NopSCADlib/vitamins/rod.scad>
 
+six_point_bed_mount = false;
 spectra_drive = false;
 split_large_parts = true;
 

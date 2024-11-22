@@ -90,11 +90,13 @@ module bottom_extrusion_assembly() assembly("bottom_extrusion") {
   l = delta_triangle_l-60;
   tz(40) {
     ry(-90) extrusion(side_extrusion, l, center = false);
-    txz(-l/2, ew2/2) tx(bed_mount_width/2) {
-      rz(90) bed_mount_left_assembly();
-    }
     txz(-l/2, ew2/2) tx(-bed_mount_width/2) {
       rz(90) bed_mount_right_assembly();
+    }
+    if (six_point_bed_mount) {
+      txz(-l/2, ew2/2) tx(bed_mount_width/2) {
+        rz(90) bed_mount_left_assembly();
+      }
     }
   }
 }
