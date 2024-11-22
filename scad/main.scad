@@ -33,7 +33,7 @@ module duet_assembly() assembly("duet") {
   p = pcb_holes(b);
   mount_l = 40;
   pad_d = pcb_land_d(b) == 0 ? th : pcb_land_d(b);
-  tz(th*1.5) pcb(b);
+  if (show_pcb) tz(th*1.5) pcb(b);
 
   left_pcb_mount_stl();
   ol = pcb_coord(b, p[1]);
