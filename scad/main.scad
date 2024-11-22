@@ -26,6 +26,8 @@ module main_assembly()
   ty(30) duet_assembly();
   rz(upright_c_angle) txz(delta_r+ew/2, delta_h*0.75) ry(90) rz(90)
     spool_mount_assembly();
+  rz(upright_c_angle) txz(delta_r+ew/2, delta_h*0.5) ry(90)
+    bowden_clip_assembly();
 }
 
 module duet_assembly() assembly("duet") {

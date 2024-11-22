@@ -33,12 +33,14 @@ idler_pulley = ["GT2x16_id5_toothed_idler", "GT2", 16,  9.75, GT2x6,  6.5,  14, 
 
 pos_x = 50+cos($t*360);
 pos_y = 50+sin($t*360);
-pos_z = 90;
+pos_z = 200;
 echo(str("$t = ", $t));
 echo(str("pos = [", pos_x, ", ", pos_y, "]"));
 delta_d = 360/sin(60);//392;
 delta_r = delta_d/2;
 delta_h = 1000;
+effector_thickness = 8;
+effector_hole_radius = 50/2;
 arm_mount_w = 46;
 arm_mount_h = 8;
 arm_length = 255;
@@ -56,8 +58,6 @@ bed_thickness = 4;
 bed_height = 74+bed_thickness; // top of bed is 60+13+1+thickness
 delta_effector_offset = 33.5;
 effector_arm_w = arm_mount_w;
-effector_thickness = 8;
-effector_hole_r = 50/2;
 ew = extrusion_width(upright_extrusion);
 ew2 = extrusion_height(side_extrusion);
 
