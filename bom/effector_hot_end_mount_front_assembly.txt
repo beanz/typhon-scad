@@ -1,0 +1,8 @@
+effector_hot_end_mount_front_assembly:
+Vitamins:
+  1 Square radial fan 4010
+  4 Heatfit insert M3 x 4mm
+  4 Screw M2 cap x  6mm
+
+Printed:
+  1 effector_hot_end_mount_front.stl

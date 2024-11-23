@@ -1,0 +1,6 @@
+effector_hot_end_mount_back_assembly:
+Vitamins:
+  6 Heatfit insert M3 x 4mm
+
+Printed:
+  1 effector_hot_end_mount_back.stl

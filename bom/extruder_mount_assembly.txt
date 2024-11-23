@@ -1,0 +1,7 @@
+extruder_mount_assembly:
+Vitamins:
+  2 Heatfit insert M3 x 4mm
+  4 Screw M3 dome x 10mm
+
+Printed:
+  1 effector_extruder_mount.stl

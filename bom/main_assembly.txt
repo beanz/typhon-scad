@@ -3,8 +3,10 @@ Printed:
   4 rail_helper.stl
 
 Assemblies:
+  1 bowden_clip_assembly
   1 duet_assembly
   1 effector_assembly
+  1 spool_mount_assembly
   1 tower_a_assembly
   1 tower_b_assembly
   1 tower_c_assembly

@@ -1,0 +1,7 @@
+bowden_clip_assembly:
+Vitamins:
+  2 Screw M5 flanged x 16mm
+  2 Nut M5 sliding T
+
+Printed:
+  1 bowden_clip.stl

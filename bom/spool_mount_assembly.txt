@@ -1,0 +1,12 @@
+spool_mount_assembly:
+Vitamins:
+  2 Ball bearing 608-2RS 8mm x 22mm x 7mm
+  4 Nut M8 x 6.5mm 
+  2 Screw M5 flanged x 16mm
+  2 Nut M5 sliding T
+  1 Threaded rod M8 x 120mm
+  2 Washer penny  M8 x 30mm x 1.5mm
+  4 Washer  M8 x 17mm x 1.6mm
+
+Printed:
+  1 spool_mount.stl

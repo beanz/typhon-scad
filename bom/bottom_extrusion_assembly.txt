@@ -3,5 +3,4 @@ Vitamins:
   3 Extrusion E2020 x 300mm
 
 Assemblies:
-  3 bed_mount_left_assemblies
   3 bed_mount_right_assemblies

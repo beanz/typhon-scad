@@ -1,3 +1,11 @@
 effector_assembly:
+Vitamins:
+  1 orbiter v2.0
+  4 Screw M3 dome x 16mm
+
 Printed:
   1 effector.stl
+
+Assemblies:
+  1 effector_hot_end_mount_assembly
+  1 extruder_mount_assembly

@@ -1,5 +1,66 @@
 [
     {
+        "name": "bowden_clip_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M5_flanged_screw, 16): Screw M5 flanged x 16mm": {
+                "count": 2
+            },
+            "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 2
+            }
+        },
+        "printed": {
+            "bowden_clip.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "spool_mount_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M5_flanged_screw, 16): Screw M5 flanged x 16mm": {
+                "count": 2
+            },
+            "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 2
+            },
+            "studding(8, 120): Threaded rod M8 x 120mm": {
+                "count": 1
+            },
+            "nut(M8_nut): Nut M8 x 6.5mm ": {
+                "count": 4
+            },
+            "washer(M8_penny_washer): Washer penny  M8 x 30mm x 1.5mm": {
+                "count": 2
+            },
+            "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
+                "count": 4
+            },
+            "ball_bearing(BB608): Ball bearing 608-2RS 8mm x 22mm x 7mm": {
+                "count": 2
+            }
+        },
+        "printed": {
+            "spool_mount.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
         "name": "duet_assembly",
         "big": null,
         "ngb": false,
@@ -7,15 +68,6 @@
         "count": 1,
         "assemblies": {},
         "vitamins": {
-            "pcb(DuetE): Duet 2 Ethernet electronics": {
-                "count": 1
-            },
-            ": Micro SD card": {
-                "count": 1
-            },
-            ": Cat 5 patch cable 300mm": {
-                "count": 1
-            },
             "screw(M5_flanged_screw, 16): Screw M5 flanged x 16mm": {
                 "count": 4
             },
@@ -39,13 +91,119 @@
         "routed": {}
     },
     {
-        "name": "effector_assembly",
+        "name": "effector_hot_end_mount_front_assembly",
         "big": null,
         "ngb": false,
         "zoomed": 0,
         "count": 1,
         "assemblies": {},
-        "vitamins": {},
+        "vitamins": {
+            "insert(M3 Voron Insert): Heatfit insert M3 x 4mm": {
+                "count": 4
+            },
+            "blower(BL40x10): Square radial fan 4010": {
+                "count": 1
+            },
+            "screw(M2_cap_screw, 6): Screw M2 cap x  6mm": {
+                "count": 4
+            }
+        },
+        "printed": {
+            "effector_hot_end_mount_front.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "effector_hot_end_mount_back_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "insert(M3 Voron Insert): Heatfit insert M3 x 4mm": {
+                "count": 6
+            }
+        },
+        "printed": {
+            "effector_hot_end_mount_back.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "effector_hot_end_mount_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "effector_hot_end_mount_back_assembly": 1,
+            "effector_hot_end_mount_front_assembly": 1
+        },
+        "vitamins": {
+            "e3d_hot_end(E3Dv6, 1.75): Hot end E3D V6 direct 1.75mm": {
+                "count": 1
+            },
+            "fan(fan40x11): Fan 40mm x 11mm": {
+                "count": 1
+            },
+            "screw(M3_cap_screw, 16): Screw M3 cap x 16mm": {
+                "count": 2
+            },
+            "screw(M3_cap_screw, 30): Screw M3 cap x 30mm": {
+                "count": 2
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "extruder_mount_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M3_dome_screw, 10): Screw M3 dome x 10mm": {
+                "count": 4
+            },
+            "insert(M3 Voron Insert): Heatfit insert M3 x 4mm": {
+                "count": 2
+            }
+        },
+        "printed": {
+            "effector_extruder_mount.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "effector_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "extruder_mount_assembly": 1,
+            "effector_hot_end_mount_assembly": 1
+        },
+        "vitamins": {
+            "screw(M3_dome_screw, 16): Screw M3 dome x 16mm": {
+                "count": 4
+            },
+            "orbiter_v2(): orbiter v2.0": {
+                "count": 1
+            }
+        },
         "printed": {
             "effector.stl": {
                 "count": 1,
@@ -55,32 +213,12 @@
         "routed": {}
     },
     {
-        "name": "idler_bearing_assembly",
-        "big": null,
-        "ngb": false,
-        "zoomed": 0,
-        "count": 3,
-        "assemblies": {},
-        "vitamins": {
-            "ball_bearing(BBF625): Ball bearing F625ZZ 5mm x 16mm x 5mm": {
-                "count": 6
-            },
-            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 6
-            }
-        },
-        "printed": {},
-        "routed": {}
-    },
-    {
         "name": "idler_assembly",
         "big": null,
         "ngb": false,
         "zoomed": 0,
         "count": 3,
-        "assemblies": {
-            "idler_bearing_assembly": 3
-        },
+        "assemblies": {},
         "vitamins": {
             "screw(M4_flanged_screw, 10): Screw M4 flanged x 10mm": {
                 "count": 12
@@ -92,6 +230,9 @@
                 "count": 3
             },
             "sliding_t_nut(M5_sliding_t_nut): Nut M5 sliding T": {
+                "count": 3
+            },
+            "pulley(GT2x16_id5_toothed_idler): Pulley GT2 idler 16 teeth": {
                 "count": 3
             }
         },
@@ -209,42 +350,12 @@
         "routed": {}
     },
     {
-        "name": "bed_mount_left_assembly",
-        "big": null,
-        "ngb": false,
-        "zoomed": 0,
-        "count": 3,
-        "assemblies": {},
-        "vitamins": {
-            "screw(M6_cap_screw, 10): Screw M6 cap x 10mm": {
-                "count": 3
-            },
-            "washer(M6_washer): Washer rubber M6 x 12.5mm x 1.5mm": {
-                "count": 3
-            },
-            "screw(M4_flanged_screw, 10): Screw M4 flanged x 10mm": {
-                "count": 6
-            },
-            "sliding_t_nut(M4_sliding_t_nut): Nut M4 sliding T": {
-                "count": 6
-            }
-        },
-        "printed": {
-            "bed_mount_left.stl": {
-                "count": 3,
-                "colour": "[0, 0.572549, 0]"
-            }
-        },
-        "routed": {}
-    },
-    {
         "name": "bottom_extrusion_assembly",
         "big": null,
         "ngb": false,
         "zoomed": 0,
         "count": 3,
         "assemblies": {
-            "bed_mount_left_assembly": 3,
             "bed_mount_right_assembly": 3
         },
         "vitamins": {
@@ -443,7 +554,7 @@
             "top_corner_assembly": 1
         },
         "vitamins": {
-            "belt(GT2x6, [[-7, 319.167, 0], [-7, 314.167, 0], [-5, 311.167, 0], [-1, 307.167, 2], [-8, 314.167, 0], [0, 1010, 8], [0, 30, 8], [-2, 287.717, 6], [2, 272.717, 2], [2.5, 274.717, 0], [2.5, 286.717, 0]]): Belt GT2 x 6mm x 2072mm": {
+            "belt(GT2x6, [[-7, 334.107, 0], [-7, 329.107, 0], [-5, 326.107, 0], [-1, 322.107, 2], [-8, 329.107, 0], [0, 1010, 8], [0, 30, 8], [-2, 302.657, 6], [2, 287.657, 2], [2.5, 289.657, 0], [2.5, 301.657, 0]]): Belt GT2 x 6mm x 2072mm": {
                 "count": 1
             }
         },
@@ -486,7 +597,7 @@
             "top_corner_assembly": 1
         },
         "vitamins": {
-            "belt(GT2x6, [[-7, 336.496, 0], [-7, 331.496, 0], [-5, 328.496, 0], [-1, 324.496, 2], [-8, 331.496, 0], [0, 1010, 8], [0, 30, 8], [-2, 305.046, 6], [2, 290.046, 2], [2.5, 292.046, 0], [2.5, 304.046, 0]]): Belt GT2 x 6mm x 2072mm": {
+            "belt(GT2x6, [[-7, 346.233, 0], [-7, 341.233, 0], [-5, 338.233, 0], [-1, 334.233, 2], [-8, 341.233, 0], [0, 1010, 8], [0, 30, 8], [-2, 314.783, 6], [2, 299.783, 2], [2.5, 301.783, 0], [2.5, 313.783, 0]]): Belt GT2 x 6mm x 2072mm": {
                 "count": 1
             }
         },
@@ -529,7 +640,7 @@
             "top_corner_assembly": 1
         },
         "vitamins": {
-            "belt(GT2x6, [[-7, 253.532, 0], [-7, 248.532, 0], [-5, 245.532, 0], [-1, 241.532, 2], [-8, 248.532, 0], [0, 1010, 8], [0, 30, 8], [-2, 222.082, 6], [2, 207.082, 2], [2.5, 209.082, 0], [2.5, 221.082, 0]]): Belt GT2 x 6mm x 2072mm": {
+            "belt(GT2x6, [[-7, 289.7, 0], [-7, 284.7, 0], [-5, 281.7, 0], [-1, 277.7, 2], [-8, 284.7, 0], [0, 1010, 8], [0, 30, 8], [-2, 258.25, 6], [2, 243.25, 2], [2.5, 245.25, 0], [2.5, 257.25, 0]]): Belt GT2 x 6mm x 2072mm": {
                 "count": 1
             }
         },
@@ -547,7 +658,9 @@
             "tower_b_assembly": 1,
             "tower_c_assembly": 1,
             "effector_assembly": 1,
-            "duet_assembly": 1
+            "duet_assembly": 1,
+            "spool_mount_assembly": 1,
+            "bowden_clip_assembly": 1
         },
         "vitamins": {},
         "printed": {
