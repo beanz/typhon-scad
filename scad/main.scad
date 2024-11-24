@@ -18,7 +18,16 @@ module main_assembly()
   rz(upright_a_angle) tx(delta_r) tower_a_assembly();
   rz(upright_b_angle) tx(delta_r) tower_b_assembly();
   rz(upright_c_angle) tx(delta_r) tower_c_assembly();
-  txyz(pos_x,pos_y,pos_z+effector_thickness/2) effector_assembly();
+  txyz(pos_x,pos_y,pos_z) {
+    effector_assembly();
+    for (a = [0, 120, 240]) rz(a) ty(delta_effector_offset)
+      tz(effector_thickness/2) {
+        ry(90) tz(arm_mount_w/2+traxxas_axle_length(Traxxas_5347))
+          screw(M3_cap_screw, 65);
+        ry(-90) tz(arm_mount_w/2+traxxas_axle_length(Traxxas_5347))
+          nut(M3_nut, nyloc = true);
+      }
+  }
   color("silver") render() tz(bed_height-bed_thickness)
     cylinder(d=bed_diameter, h=bed_thickness);
   myz(ew*1.5) myz((ew*1.5)/2)
