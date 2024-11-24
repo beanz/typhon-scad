@@ -106,7 +106,8 @@ module effector_extruder_mount_stl() {
         cylinder(r = screw_clearance_radius(M3_dome_screw),
                  h = eta*2+th);
     }
-   orbiter_mount_positions() tz(th)
+    cylinder(d = 4.2, h = th*3, center = true);
+    orbiter_mount_positions() tz(th)
       rx(180) cylinder(r = insert_hole_radius(M3_Voron_insert), h = 8);
   }
 }
@@ -356,12 +357,12 @@ module bowden_clip_assembly() {
 
 if ($preview) {
   $explode = 0;
-  effector_assembly();
+  //effector_assembly();
   //effector_stl();
   //effector_hot_end_mount_assembly();
   //effector_hot_end_mount_back_assembly();
   //effector_hot_end_mount_front_assembly();
-  //extruder_mount_assembly();
+  extruder_mount_assembly();
   //bowden_clip_assembly();
   //bowden_clip_stl();
 }
